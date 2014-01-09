@@ -6,14 +6,12 @@ import java.util.List;
 import java.util.Map;
 
 import me.risky.commondialog.CDConstants;
-import me.risky.commondialog.CommonDialog;
+import me.risky.commondialog.CommonAlertDialog;
 import me.risky.commondialog.CommonListDialog;
 import android.app.Activity;
-import android.app.Dialog;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
@@ -35,7 +33,7 @@ public class MainActivity extends Activity {
 		list.add("showDialogByString");
 		list.add("showCustomDialog");
 		list.add("showThemeDialog");
-		
+		list.add("showAlertDialog");
 		
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list);
 		
@@ -58,6 +56,9 @@ public class MainActivity extends Activity {
 					break;
 				case 3:
 					showThemeDialog();
+					break;
+				case 4:
+					showAlertDialog();
 					break;
 				default:
 					break;
@@ -103,7 +104,7 @@ public class MainActivity extends Activity {
     }
     
     private void showDialogByMap(){
-    	CommonListDialog dialog = (CommonListDialog)CommonDialog.createDialog(this, R.style.MyDialog);
+    	CommonListDialog dialog = new CommonListDialog(this);
     	dialog.setData(testAddDataMap());
     	dialog.show();
     }
@@ -134,4 +135,11 @@ public class MainActivity extends Activity {
 //    	CommonDialog commonDialog = new CommonDialog(this, R.style.MyDialog);
 //		commonDialog.show();
     }
+    
+    private void showAlertDialog(){
+    	CommonAlertDialog dialog = new CommonAlertDialog(this, true, null);
+    	dialog.show();
+    }
+    
+    
 }
