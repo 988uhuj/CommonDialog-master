@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <declare-styleable name="ListDialog">
+        <!-- Style of the list dialog. -->
+        <attr name="x" format="dimension" />
+        <attr name="y" format="dimension" />
+        <attr name="width" format="dimension" />
+        <attr name="height" format="dimension" />
+        <attr name="android:gravity" />
+        <attr name="anim" format="reference" />
+        <attr name="background" format="reference" />
+        <attr name="android:textSize" />
+       	<attr name="android:textColor"/>
+        <attr name="itemBackground" format="reference" />
+        <attr name="android:textAppearance" />
+        <attr name="stringArray" format="reference" />
+        
+      	
+    </declare-styleable>
+    
+    
+    <declare-styleable name="Dialog">
+    	<attr name="type" format="string" />
+    </declare-styleable>
+
+</resources>

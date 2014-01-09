@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    
+   	<!--  默认style -->
+    <style name="Theme.CommonListDialog" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上 -->
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+        
+        <!-- 自定义窗口属性 -->
+        <item name="x">0dp</item>
+        <item name="y">0dp</item>	
+        <item name="width">200dp</item>
+        <item name="height">200dp</item>
+        <item name="android:gravity">center</item>
+        <item name="anim">@style/common_dialog_window_anim_top</item>
+        <item name="background">@drawable/login_input</item>
+        
+        <item name="type">list</item>
+        
+        
+        <!-- 可覆盖Appearance中的属性 -->
+        <!-- 自定义list item属性 -->
+       <!--  <item name="android:textColor">@color/light_gray</item> -->
+       <!--  <item name="android:textSize">18sp</item> -->
+      	<item name="android:textAppearance">@style/TextAppearance.itemText</item>
+      	<!-- <item name="itemBackground">@drawable/btn_list_item</item> -->
+    </style>
+    
+    
+    <style name="Widget">
+    </style>
+    
+    <style name="TextAppearance.itemText" parent="Widget">
+        <item name="android:textStyle">bold</item>
+       	<item name="android:textSize">32sp</item>
+        <item name="android:textColor">@color/light_gray</item>
+        <item name="android:background">@drawable/btn_list_item</item>
+    </style>
+    
+    
+    
+    
+    <!-- 对话框动画 -->
+    <style name="common_dialog_window_anim_top" parent="android:Animation" mce_bogus="1">
+        <item name="android:windowEnterAnimation">@anim/push_down_in</item>
+        <item name="android:windowExitAnimation">@anim/push_up_out</item>
+    </style>
+    <style name="common_dialog_window_anim_bottom" parent="android:Animation" mce_bogus="1">
+        <item name="android:windowEnterAnimation">@anim/push_up_in</item>
+        <item name="android:windowExitAnimation">@anim/push_down_out</item>
+    </style>
+    <style name="common_dialog_window_anim_left" parent="android:Animation" mce_bogus="1">
+        <item name="android:windowEnterAnimation">@anim/push_right_in</item>
+        <item name="android:windowExitAnimation">@anim/push_left_out</item>
+    </style>
+    <style name="common_dialog_window_anim_right" parent="android:Animation" mce_bogus="1">
+        <item name="android:windowEnterAnimation">@anim/push_left_in</item>
+        <item name="android:windowExitAnimation">@anim/push_right_out</item>
+    </style>
+</resources>
