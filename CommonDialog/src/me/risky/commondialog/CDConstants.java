@@ -21,19 +21,25 @@ public class CDConstants {
 	 *
 	 */
 	public static class DEF_NO_VALUE{
-		public static int NO_TEXTCOLOR = -1;
-		public static float NO_TEXTSIZE = -1;
-		public static int NO_X = 0;
-		public static int NO_Y = 0;
-		public static int NO_WIDTH = -1;
-		public static int NO£ßHEIGHT = -1;
-		public static int NO_ANIM = -1;
-		public static int NO_GRAVITY = -1;
-		public static int NO_ITEMBG = -1;
-		public static int NO_MENUS = -1;
-		public static int NO_BG = -1;
+//		public static int NO_TEXTCOLOR = -1;
+//		public static float NO_TEXTSIZE = -1;
+//		public static int NO_X = 0;
+//		public static int NO_Y = 0;
+//		public static int NO_WIDTH = -1;
+//		public static int NO£ßHEIGHT = -1;
+//		public static int NO_ANIM = -1;
+//		public static int NO_GRAVITY = -1;
+//		public static int NO_ITEMBG = -1;
+//		public static int NO_MENUS = -1;
+//		public static int NO_DRAWABLE = -1;
 		
 		public static int NO_INT = -1;
 		public static float NO_FLOAT = -1.0f;
+		
+	}
+	
+	public static class DEF_DIALOG_TYPE{
+		public final static int LIST_DIALOG = 1;
+		public final static int ALERT_DIALOG = 2;
 	}
 }

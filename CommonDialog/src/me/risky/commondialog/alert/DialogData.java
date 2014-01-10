@@ -33,8 +33,11 @@ public class DialogData {
 	private String negativeBtnText;
 	private Integer negativeBtnBg;
 	private Integer buttonPadding;	
-	private Integer buttonMargin;	
+	private Integer buttonMargin;
 	private boolean autoDismiss; 
+	private boolean showButtons;
+	
+	private Integer type;
 	
 	
 	public Integer getTitleBackground() {
@@ -199,5 +202,17 @@ public class DialogData {
 	}
 	public void setAutoDismiss(boolean autoDismiss) {
 		this.autoDismiss = autoDismiss;
+	}
+	public boolean isShowButtons() {
+		return showButtons;
+	}
+	public void setShowButtons(boolean showButtons) {
+		this.showButtons = showButtons;
+	}
+	public Integer getType() {
+		return type;
+	}
+	public void setType(Integer type) {
+		this.type = type;
 	}
 }

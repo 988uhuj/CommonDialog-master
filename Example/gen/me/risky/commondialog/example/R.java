@@ -26,13 +26,13 @@ public final class R {
         public static final int translate_up_to_down=0x7f04000e;
     }
     public static final class array {
-        public static final int city=0x7f090000;
+        public static final int city=0x7f0a0000;
     }
     public static final class attr {
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int anim=0x7f01001a;
+        public static final int anim=0x7f01000a;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -40,15 +40,11 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int autoDismiss=0x7f01001c;
+        public static final int autoDismiss=0x7f01000c;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int background=0x7f01001b;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static final int btnBackground=0x7f010014;
+        public static final int background=0x7f01000b;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -58,7 +54,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int buttonMargin=0x7f010013;
+        public static final int buttonMargin=0x7f01001c;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -68,7 +64,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int buttonPadding=0x7f010012;
+        public static final int buttonPadding=0x7f01001b;
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -76,11 +72,11 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int content=0x7f010008;
+        public static final int content=0x7f010004;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int contentBackground=0x7f010009;
+        public static final int contentBackground=0x7f010005;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -89,7 +85,18 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int contentTextColor=0x7f010007;
+        public static final int contentTextColor=0x7f010003;
+        /**  Style of the alert dialog. 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int contentTextSize=0x7f010002;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -99,17 +106,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int contentTextSize=0x7f010006;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int height=0x7f010019;
+        public static final int height=0x7f010009;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -121,11 +118,11 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int negativeButton=0x7f01000e;
+        public static final int negativeButton=0x7f010017;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int negativeButtonBg=0x7f010010;
+        public static final int negativeButtonBg=0x7f010019;
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -133,15 +130,15 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int negativeButtonText=0x7f01000f;
+        public static final int negativeButtonText=0x7f010018;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int onNegativeClick=0x7f010011;
+        public static final int onNegativeClick=0x7f01001a;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int onPositiveClick=0x7f01000d;
+        public static final int onPositiveClick=0x7f010016;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -149,11 +146,11 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int positiveButton=0x7f01000a;
+        public static final int positiveButton=0x7f010013;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int positiveButtonBg=0x7f01000c;
+        public static final int positiveButtonBg=0x7f010015;
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -161,7 +158,15 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int positiveButtonText=0x7f01000b;
+        public static final int positiveButtonText=0x7f010014;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int showButtons=0x7f01000d;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
@@ -173,15 +178,11 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int title=0x7f010004;
+        public static final int title=0x7f010011;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int titleBackground=0x7f010005;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static final int titleTextAppearance=0x7f010015;
+        public static final int titleBackground=0x7f010012;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -190,18 +191,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int titleTextColor=0x7f010003;
-        /**  Style of the alert dialog. 
-         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int titleTextSize=0x7f010002;
+        public static final int titleTextColor=0x7f010010;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -211,7 +201,28 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int width=0x7f010018;
+        public static final int titleTextSize=0x7f01000f;
+        /** <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>list</code></td><td>1</td><td></td></tr>
+<tr><td><code>alert</code></td><td>2</td><td></td></tr>
+</table>
+         */
+        public static final int type=0x7f01000e;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int width=0x7f010008;
         /**  Style of the base dialog. 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
@@ -222,7 +233,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int x=0x7f010016;
+        public static final int x=0x7f010006;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -232,7 +243,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int y=0x7f010017;
+        public static final int y=0x7f010007;
     }
     public static final class color {
         /**  <color name="default_text_color">#FFFFFFFF</color>
@@ -244,8 +255,8 @@ containing a value of this type.
 	<dimen name="default_width">200dp</dimen>
 	<dimen name="default_height">200dp</dimen> 
          */
-        public static final int light_gray=0x7f050000;
-        public static final int transparentgray=0x7f050001;
+        public static final int light_gray=0x7f060000;
+        public static final int transparentgray=0x7f060001;
     }
     public static final class dimen {
         /** 
@@ -258,8 +269,8 @@ containing a value of this type.
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f070000;
-        public static final int activity_vertical_margin=0x7f070001;
+        public static final int activity_horizontal_margin=0x7f080000;
+        public static final int activity_vertical_margin=0x7f080001;
     }
     public static final class drawable {
         public static final int bg_button=0x7f020000;
@@ -275,18 +286,20 @@ containing a value of this type.
         public static final int login_input=0x7f02000a;
     }
     public static final class id {
-        public static final int action_settings=0x7f0b000b;
-        public static final int buttonLayout=0x7f0b0004;
-        public static final int content=0x7f0b0003;
-        public static final int itemBtn=0x7f0b000a;
-        public static final int listview=0x7f0b0009;
-        public static final int listview01=0x7f0b0000;
-        public static final int main=0x7f0b0001;
-        public static final int negativeBtn=0x7f0b0008;
-        public static final int negativeLayout=0x7f0b0007;
-        public static final int positiveBtn=0x7f0b0006;
-        public static final int positiveLayout=0x7f0b0005;
-        public static final int title=0x7f0b0002;
+        public static final int action_settings=0x7f05000d;
+        public static final int alert=0x7f050001;
+        public static final int buttonLayout=0x7f050006;
+        public static final int content=0x7f050005;
+        public static final int itemBtn=0x7f05000c;
+        public static final int list=0x7f050000;
+        public static final int listview=0x7f05000b;
+        public static final int listview01=0x7f050002;
+        public static final int main=0x7f050003;
+        public static final int negativeBtn=0x7f05000a;
+        public static final int negativeLayout=0x7f050009;
+        public static final int positiveBtn=0x7f050008;
+        public static final int positiveLayout=0x7f050007;
+        public static final int title=0x7f050004;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
@@ -295,12 +308,12 @@ containing a value of this type.
         public static final int listview_item=0x7f030003;
     }
     public static final class menu {
-        public static final int main=0x7f0a0000;
+        public static final int main=0x7f0b0000;
     }
     public static final class string {
-        public static final int action_settings=0x7f080001;
-        public static final int app_name=0x7f080000;
-        public static final int hello_world=0x7f080002;
+        public static final int action_settings=0x7f090001;
+        public static final int app_name=0x7f090000;
+        public static final int hello_world=0x7f090002;
     }
     public static final class style {
         /** 
@@ -335,29 +348,29 @@ containing a value of this type.
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060008;
+        public static final int AppBaseTheme=0x7f070008;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060009;
+        public static final int AppTheme=0x7f070009;
         /**  自定义对话框Style 
          */
-        public static final int MyDialog=0x7f06000a;
-        public static final int TextAppearance_itemText=0x7f060002;
+        public static final int MyDialog=0x7f07000a;
+        public static final int TextAppearance_itemText=0x7f070002;
         /**  自定义对话框中item 
          */
-        public static final int TextApperance=0x7f06000b;
-        public static final int Theme_CommonAlertDialog=0x7f060003;
+        public static final int TextApperance=0x7f07000b;
+        public static final int Theme_CommonAlertDialog=0x7f070003;
         /**   默认 list style 
          */
-        public static final int Theme_CommonListDialog=0x7f060000;
-        public static final int Widget=0x7f060001;
-        public static final int common_dialog_window_anim_bottom=0x7f060005;
-        public static final int common_dialog_window_anim_left=0x7f060006;
-        public static final int common_dialog_window_anim_right=0x7f060007;
+        public static final int Theme_CommonListDialog=0x7f070000;
+        public static final int Widget=0x7f070001;
+        public static final int common_dialog_window_anim_bottom=0x7f070005;
+        public static final int common_dialog_window_anim_left=0x7f070006;
+        public static final int common_dialog_window_anim_right=0x7f070007;
         /**  对话框动画 
          */
-        public static final int common_dialog_window_anim_top=0x7f060004;
+        public static final int common_dialog_window_anim_top=0x7f070004;
     }
     public static final class styleable {
         /** Attributes that can be used with a AlertDialog.
@@ -366,97 +379,19 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #AlertDialog_btnBackground me.risky.commondialog.example:btnBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_buttonMargin me.risky.commondialog.example:buttonMargin}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_buttonPadding me.risky.commondialog.example:buttonPadding}</code></td><td></td></tr>
            <tr><td><code>{@link #AlertDialog_content me.risky.commondialog.example:content}</code></td><td></td></tr>
            <tr><td><code>{@link #AlertDialog_contentBackground me.risky.commondialog.example:contentBackground}</code></td><td></td></tr>
            <tr><td><code>{@link #AlertDialog_contentTextColor me.risky.commondialog.example:contentTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_contentTextSize me.risky.commondialog.example:contentTextSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_negativeButton me.risky.commondialog.example:negativeButton}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_negativeButtonBg me.risky.commondialog.example:negativeButtonBg}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_negativeButtonText me.risky.commondialog.example:negativeButtonText}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_onNegativeClick me.risky.commondialog.example:onNegativeClick}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_onPositiveClick me.risky.commondialog.example:onPositiveClick}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_positiveButton me.risky.commondialog.example:positiveButton}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_positiveButtonBg me.risky.commondialog.example:positiveButtonBg}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_positiveButtonText me.risky.commondialog.example:positiveButtonText}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_title me.risky.commondialog.example:title}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_titleBackground me.risky.commondialog.example:titleBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_titleTextAppearance me.risky.commondialog.example:titleTextAppearance}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_titleTextColor me.risky.commondialog.example:titleTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_titleTextSize me.risky.commondialog.example:titleTextSize}</code></td><td> Style of the alert dialog.</td></tr>
+           <tr><td><code>{@link #AlertDialog_contentTextSize me.risky.commondialog.example:contentTextSize}</code></td><td> Style of the alert dialog.</td></tr>
            </table>
-           @see #AlertDialog_btnBackground
-           @see #AlertDialog_buttonMargin
-           @see #AlertDialog_buttonPadding
            @see #AlertDialog_content
            @see #AlertDialog_contentBackground
            @see #AlertDialog_contentTextColor
            @see #AlertDialog_contentTextSize
-           @see #AlertDialog_negativeButton
-           @see #AlertDialog_negativeButtonBg
-           @see #AlertDialog_negativeButtonText
-           @see #AlertDialog_onNegativeClick
-           @see #AlertDialog_onPositiveClick
-           @see #AlertDialog_positiveButton
-           @see #AlertDialog_positiveButtonBg
-           @see #AlertDialog_positiveButtonText
-           @see #AlertDialog_title
-           @see #AlertDialog_titleBackground
-           @see #AlertDialog_titleTextAppearance
-           @see #AlertDialog_titleTextColor
-           @see #AlertDialog_titleTextSize
          */
         public static final int[] AlertDialog = {
-            0x7f010002, 0x7f010003, 0x7f010004, 0x7f010005,
-            0x7f010006, 0x7f010007, 0x7f010008, 0x7f010009,
-            0x7f01000a, 0x7f01000b, 0x7f01000c, 0x7f01000d,
-            0x7f01000e, 0x7f01000f, 0x7f010010, 0x7f010011,
-            0x7f010012, 0x7f010013, 0x7f010014, 0x7f010015
+            0x7f010002, 0x7f010003, 0x7f010004, 0x7f010005
         };
-        /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#btnBackground}
-          attribute's value can be found in the {@link #AlertDialog} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name me.risky.commondialog.example:btnBackground
-        */
-        public static final int AlertDialog_btnBackground = 18;
-        /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#buttonMargin}
-          attribute's value can be found in the {@link #AlertDialog} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name me.risky.commondialog.example:buttonMargin
-        */
-        public static final int AlertDialog_buttonMargin = 17;
-        /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#buttonPadding}
-          attribute's value can be found in the {@link #AlertDialog} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name me.risky.commondialog.example:buttonPadding
-        */
-        public static final int AlertDialog_buttonPadding = 16;
         /**
           <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#content}
           attribute's value can be found in the {@link #AlertDialog} array.
@@ -470,7 +405,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name me.risky.commondialog.example:content
         */
-        public static final int AlertDialog_content = 6;
+        public static final int AlertDialog_content = 2;
         /**
           <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#contentBackground}
           attribute's value can be found in the {@link #AlertDialog} array.
@@ -480,7 +415,7 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name me.risky.commondialog.example:contentBackground
         */
-        public static final int AlertDialog_contentBackground = 7;
+        public static final int AlertDialog_contentBackground = 3;
         /**
           <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#contentTextColor}
           attribute's value can be found in the {@link #AlertDialog} array.
@@ -495,168 +430,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name me.risky.commondialog.example:contentTextColor
         */
-        public static final int AlertDialog_contentTextColor = 5;
-        /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#contentTextSize}
-          attribute's value can be found in the {@link #AlertDialog} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name me.risky.commondialog.example:contentTextSize
-        */
-        public static final int AlertDialog_contentTextSize = 4;
-        /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#negativeButton}
-          attribute's value can be found in the {@link #AlertDialog} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name me.risky.commondialog.example:negativeButton
-        */
-        public static final int AlertDialog_negativeButton = 12;
-        /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#negativeButtonBg}
-          attribute's value can be found in the {@link #AlertDialog} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name me.risky.commondialog.example:negativeButtonBg
-        */
-        public static final int AlertDialog_negativeButtonBg = 14;
-        /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#negativeButtonText}
-          attribute's value can be found in the {@link #AlertDialog} array.
-
-
-          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name me.risky.commondialog.example:negativeButtonText
-        */
-        public static final int AlertDialog_negativeButtonText = 13;
-        /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#onNegativeClick}
-          attribute's value can be found in the {@link #AlertDialog} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name me.risky.commondialog.example:onNegativeClick
-        */
-        public static final int AlertDialog_onNegativeClick = 15;
-        /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#onPositiveClick}
-          attribute's value can be found in the {@link #AlertDialog} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name me.risky.commondialog.example:onPositiveClick
-        */
-        public static final int AlertDialog_onPositiveClick = 11;
-        /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#positiveButton}
-          attribute's value can be found in the {@link #AlertDialog} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name me.risky.commondialog.example:positiveButton
-        */
-        public static final int AlertDialog_positiveButton = 8;
-        /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#positiveButtonBg}
-          attribute's value can be found in the {@link #AlertDialog} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name me.risky.commondialog.example:positiveButtonBg
-        */
-        public static final int AlertDialog_positiveButtonBg = 10;
-        /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#positiveButtonText}
-          attribute's value can be found in the {@link #AlertDialog} array.
-
-
-          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name me.risky.commondialog.example:positiveButtonText
-        */
-        public static final int AlertDialog_positiveButtonText = 9;
-        /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#title}
-          attribute's value can be found in the {@link #AlertDialog} array.
-
-
-          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name me.risky.commondialog.example:title
-        */
-        public static final int AlertDialog_title = 2;
-        /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#titleBackground}
-          attribute's value can be found in the {@link #AlertDialog} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name me.risky.commondialog.example:titleBackground
-        */
-        public static final int AlertDialog_titleBackground = 3;
-        /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#titleTextAppearance}
-          attribute's value can be found in the {@link #AlertDialog} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name me.risky.commondialog.example:titleTextAppearance
-        */
-        public static final int AlertDialog_titleTextAppearance = 19;
-        /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#titleTextColor}
-          attribute's value can be found in the {@link #AlertDialog} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name me.risky.commondialog.example:titleTextColor
-        */
-        public static final int AlertDialog_titleTextColor = 1;
+        public static final int AlertDialog_contentTextColor = 1;
         /**
           <p>
           @attr description
@@ -672,9 +446,9 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
           <p>This is a private symbol.
-          @attr name me.risky.commondialog.example:titleTextSize
+          @attr name me.risky.commondialog.example:contentTextSize
         */
-        public static final int AlertDialog_titleTextSize = 0;
+        public static final int AlertDialog_contentTextSize = 0;
         /**  对话框共有的属性 
            <p>Includes the following attributes:</p>
            <table>
@@ -685,7 +459,23 @@ containing a value of this type.
            <tr><td><code>{@link #CommonDialog_anim me.risky.commondialog.example:anim}</code></td><td></td></tr>
            <tr><td><code>{@link #CommonDialog_autoDismiss me.risky.commondialog.example:autoDismiss}</code></td><td></td></tr>
            <tr><td><code>{@link #CommonDialog_background me.risky.commondialog.example:background}</code></td><td></td></tr>
+           <tr><td><code>{@link #CommonDialog_buttonMargin me.risky.commondialog.example:buttonMargin}</code></td><td></td></tr>
+           <tr><td><code>{@link #CommonDialog_buttonPadding me.risky.commondialog.example:buttonPadding}</code></td><td></td></tr>
            <tr><td><code>{@link #CommonDialog_height me.risky.commondialog.example:height}</code></td><td></td></tr>
+           <tr><td><code>{@link #CommonDialog_negativeButton me.risky.commondialog.example:negativeButton}</code></td><td></td></tr>
+           <tr><td><code>{@link #CommonDialog_negativeButtonBg me.risky.commondialog.example:negativeButtonBg}</code></td><td></td></tr>
+           <tr><td><code>{@link #CommonDialog_negativeButtonText me.risky.commondialog.example:negativeButtonText}</code></td><td></td></tr>
+           <tr><td><code>{@link #CommonDialog_onNegativeClick me.risky.commondialog.example:onNegativeClick}</code></td><td></td></tr>
+           <tr><td><code>{@link #CommonDialog_onPositiveClick me.risky.commondialog.example:onPositiveClick}</code></td><td></td></tr>
+           <tr><td><code>{@link #CommonDialog_positiveButton me.risky.commondialog.example:positiveButton}</code></td><td></td></tr>
+           <tr><td><code>{@link #CommonDialog_positiveButtonBg me.risky.commondialog.example:positiveButtonBg}</code></td><td></td></tr>
+           <tr><td><code>{@link #CommonDialog_positiveButtonText me.risky.commondialog.example:positiveButtonText}</code></td><td></td></tr>
+           <tr><td><code>{@link #CommonDialog_showButtons me.risky.commondialog.example:showButtons}</code></td><td></td></tr>
+           <tr><td><code>{@link #CommonDialog_title me.risky.commondialog.example:title}</code></td><td></td></tr>
+           <tr><td><code>{@link #CommonDialog_titleBackground me.risky.commondialog.example:titleBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #CommonDialog_titleTextColor me.risky.commondialog.example:titleTextColor}</code></td><td></td></tr>
+           <tr><td><code>{@link #CommonDialog_titleTextSize me.risky.commondialog.example:titleTextSize}</code></td><td></td></tr>
+           <tr><td><code>{@link #CommonDialog_type me.risky.commondialog.example:type}</code></td><td></td></tr>
            <tr><td><code>{@link #CommonDialog_width me.risky.commondialog.example:width}</code></td><td></td></tr>
            <tr><td><code>{@link #CommonDialog_x me.risky.commondialog.example:x}</code></td><td> Style of the base dialog.</td></tr>
            <tr><td><code>{@link #CommonDialog_y me.risky.commondialog.example:y}</code></td><td></td></tr>
@@ -694,13 +484,33 @@ containing a value of this type.
            @see #CommonDialog_anim
            @see #CommonDialog_autoDismiss
            @see #CommonDialog_background
+           @see #CommonDialog_buttonMargin
+           @see #CommonDialog_buttonPadding
            @see #CommonDialog_height
+           @see #CommonDialog_negativeButton
+           @see #CommonDialog_negativeButtonBg
+           @see #CommonDialog_negativeButtonText
+           @see #CommonDialog_onNegativeClick
+           @see #CommonDialog_onPositiveClick
+           @see #CommonDialog_positiveButton
+           @see #CommonDialog_positiveButtonBg
+           @see #CommonDialog_positiveButtonText
+           @see #CommonDialog_showButtons
+           @see #CommonDialog_title
+           @see #CommonDialog_titleBackground
+           @see #CommonDialog_titleTextColor
+           @see #CommonDialog_titleTextSize
+           @see #CommonDialog_type
            @see #CommonDialog_width
            @see #CommonDialog_x
            @see #CommonDialog_y
          */
         public static final int[] CommonDialog = {
-            0x010100af, 0x7f010016, 0x7f010017, 0x7f010018,
+            0x010100af, 0x7f010006, 0x7f010007, 0x7f010008,
+            0x7f010009, 0x7f01000a, 0x7f01000b, 0x7f01000c,
+            0x7f01000d, 0x7f01000e, 0x7f01000f, 0x7f010010,
+            0x7f010011, 0x7f010012, 0x7f010013, 0x7f010014,
+            0x7f010015, 0x7f010016, 0x7f010017, 0x7f010018,
             0x7f010019, 0x7f01001a, 0x7f01001b, 0x7f01001c
         };
         /**
@@ -744,6 +554,38 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int CommonDialog_background = 6;
         /**
+          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#buttonMargin}
+          attribute's value can be found in the {@link #CommonDialog} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name me.risky.commondialog.example:buttonMargin
+        */
+        public static final int CommonDialog_buttonMargin = 23;
+        /**
+          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#buttonPadding}
+          attribute's value can be found in the {@link #CommonDialog} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name me.risky.commondialog.example:buttonPadding
+        */
+        public static final int CommonDialog_buttonPadding = 22;
+        /**
           <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#height}
           attribute's value can be found in the {@link #CommonDialog} array.
 
@@ -759,6 +601,188 @@ containing a value of this type.
           @attr name me.risky.commondialog.example:height
         */
         public static final int CommonDialog_height = 4;
+        /**
+          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#negativeButton}
+          attribute's value can be found in the {@link #CommonDialog} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name me.risky.commondialog.example:negativeButton
+        */
+        public static final int CommonDialog_negativeButton = 18;
+        /**
+          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#negativeButtonBg}
+          attribute's value can be found in the {@link #CommonDialog} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name me.risky.commondialog.example:negativeButtonBg
+        */
+        public static final int CommonDialog_negativeButtonBg = 20;
+        /**
+          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#negativeButtonText}
+          attribute's value can be found in the {@link #CommonDialog} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name me.risky.commondialog.example:negativeButtonText
+        */
+        public static final int CommonDialog_negativeButtonText = 19;
+        /**
+          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#onNegativeClick}
+          attribute's value can be found in the {@link #CommonDialog} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name me.risky.commondialog.example:onNegativeClick
+        */
+        public static final int CommonDialog_onNegativeClick = 21;
+        /**
+          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#onPositiveClick}
+          attribute's value can be found in the {@link #CommonDialog} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name me.risky.commondialog.example:onPositiveClick
+        */
+        public static final int CommonDialog_onPositiveClick = 17;
+        /**
+          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#positiveButton}
+          attribute's value can be found in the {@link #CommonDialog} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name me.risky.commondialog.example:positiveButton
+        */
+        public static final int CommonDialog_positiveButton = 14;
+        /**
+          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#positiveButtonBg}
+          attribute's value can be found in the {@link #CommonDialog} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name me.risky.commondialog.example:positiveButtonBg
+        */
+        public static final int CommonDialog_positiveButtonBg = 16;
+        /**
+          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#positiveButtonText}
+          attribute's value can be found in the {@link #CommonDialog} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name me.risky.commondialog.example:positiveButtonText
+        */
+        public static final int CommonDialog_positiveButtonText = 15;
+        /**
+          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#showButtons}
+          attribute's value can be found in the {@link #CommonDialog} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name me.risky.commondialog.example:showButtons
+        */
+        public static final int CommonDialog_showButtons = 8;
+        /**
+          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#title}
+          attribute's value can be found in the {@link #CommonDialog} array.
+
+
+          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name me.risky.commondialog.example:title
+        */
+        public static final int CommonDialog_title = 12;
+        /**
+          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#titleBackground}
+          attribute's value can be found in the {@link #CommonDialog} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name me.risky.commondialog.example:titleBackground
+        */
+        public static final int CommonDialog_titleBackground = 13;
+        /**
+          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#titleTextColor}
+          attribute's value can be found in the {@link #CommonDialog} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name me.risky.commondialog.example:titleTextColor
+        */
+        public static final int CommonDialog_titleTextColor = 11;
+        /**
+          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#titleTextSize}
+          attribute's value can be found in the {@link #CommonDialog} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name me.risky.commondialog.example:titleTextSize
+        */
+        public static final int CommonDialog_titleTextSize = 10;
+        /**
+          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#type}
+          attribute's value can be found in the {@link #CommonDialog} array.
+
+
+          <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>list</code></td><td>1</td><td></td></tr>
+<tr><td><code>alert</code></td><td>2</td><td></td></tr>
+</table>
+          @attr name me.risky.commondialog.example:type
+        */
+        public static final int CommonDialog_type = 9;
         /**
           <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#width}
           attribute's value can be found in the {@link #CommonDialog} array.

@@ -86,55 +86,42 @@ public class CommonListDialog extends Dialog {
 		initData();
 		
 		// 无配置信息时的默认值
-		final int noTextColor = CDConstants.DEF_NO_VALUE.NO_TEXTCOLOR;
-		final float noTextSize = CDConstants.DEF_NO_VALUE.NO_TEXTSIZE;
-		final int noX = CDConstants.DEF_NO_VALUE.NO_X;
-		final int noY = CDConstants.DEF_NO_VALUE.NO_Y;
-		final int noWidth = CDConstants.DEF_NO_VALUE.NO_WIDTH;
-		final int noHeight = CDConstants.DEF_NO_VALUE.NO＿HEIGHT;
-		final int noAnim = CDConstants.DEF_NO_VALUE.NO_ANIM;
-		final int noGravity = CDConstants.DEF_NO_VALUE.NO_GRAVITY;
-		final int noItemBg = CDConstants.DEF_NO_VALUE.NO_ITEMBG;
-		final int noMenus = CDConstants.DEF_NO_VALUE.NO_MENUS;
-		final int noBg = CDConstants.DEF_NO_VALUE.NO_BG;
-		
+		final int noInt = CDConstants.DEF_NO_VALUE.NO_INT;
+		final float noFloat = CDConstants.DEF_NO_VALUE.NO_FLOAT;
 		
 		TypedArray commonTypedArray = context.obtainStyledAttributes(style, R.styleable.CommonDialog);
-		
-		int customBg = commonTypedArray.getResourceId(R.styleable.CommonDialog_background, noBg); 
-		int customX = (int) commonTypedArray.getDimension(R.styleable.CommonDialog_x, noX);
-		int customY = (int) commonTypedArray.getDimension(R.styleable.CommonDialog_y, noY);
-		int customWidth = (int) commonTypedArray.getDimension(R.styleable.CommonDialog_width, 0);
-		int customHeight = (int) commonTypedArray.getDimension(R.styleable.CommonDialog_height, 0);
-		int customGravity = commonTypedArray.getInteger(R.styleable.CommonDialog_android_gravity, noGravity);
-		int customAnim = commonTypedArray.getResourceId(R.styleable.CommonDialog_anim, noAnim);
+		int customBg = commonTypedArray.getResourceId(R.styleable.CommonDialog_background, noInt); 
+		int customX = (int) commonTypedArray.getDimension(R.styleable.CommonDialog_x, noInt);
+		int customY = (int) commonTypedArray.getDimension(R.styleable.CommonDialog_y, noInt);
+		int customWidth = (int) commonTypedArray.getDimension(R.styleable.CommonDialog_width, noInt);
+		int customHeight = (int) commonTypedArray.getDimension(R.styleable.CommonDialog_height, noInt);
+		int customGravity = commonTypedArray.getInteger(R.styleable.CommonDialog_android_gravity, noInt);
+		int customAnim = commonTypedArray.getResourceId(R.styleable.CommonDialog_anim, noInt);
 		commonTypedArray.recycle();
 		
 		
 		// 从Style配置中读取数据
 		TypedArray typedArray = context.obtainStyledAttributes(style, R.styleable.ListDialog);
-		
-		float customTextSize = typedArray.getDimension(R.styleable.ListDialog_android_textSize, noTextSize); 
-		int customTextColor = typedArray.getColor(R.styleable.ListDialog_android_textColor, noTextColor);
-		int customItemBg = typedArray.getResourceId(R.styleable.ListDialog_itemBackground, noItemBg);
-		int customMenus = typedArray.getResourceId(R.styleable.ListDialog_stringArray, noMenus);
-		int customTextAppearance = typedArray.getResourceId(R.styleable.ListDialog_android_textAppearance, -1);
-		
+		float customTextSize = typedArray.getDimension(R.styleable.ListDialog_android_textSize, noFloat); 
+		int customTextColor = typedArray.getColor(R.styleable.ListDialog_android_textColor, noInt);
+		int customItemBg = typedArray.getResourceId(R.styleable.ListDialog_itemBackground, noInt);
+		int customMenus = typedArray.getResourceId(R.styleable.ListDialog_stringArray, noInt);
+		int customTextAppearance = typedArray.getResourceId(R.styleable.ListDialog_android_textAppearance, noInt);
 		typedArray.recycle();
 		 
 		
 		// 保存配置数据
-		if(customTextColor != noTextColor) dialogData.setTextColor(customTextColor);
-		if(customTextSize != noTextSize) dialogData.setTextSize(customTextSize);
-		if(customBg != noBg) dialogData.setBg(customBg);
-		if(customX != noX) dialogData.setX(customX);	
-		if(customY != noY) dialogData.setY(customY);
-		if(customWidth != noWidth) dialogData.setWidth(customWidth);
-		if(customHeight != noHeight) dialogData.setHeight(customHeight);
-		if(customGravity != noGravity) dialogData.setGravity(customGravity);
-		if(customAnim != noAnim) dialogData.setAnim(customAnim);
-		if(customItemBg != noItemBg) dialogData.setItemBg(customItemBg);
-		if(customMenus != noMenus) dialogData.setMenus(context.getResources().getStringArray(customMenus));
+		if(customTextColor != noInt) dialogData.setTextColor(customTextColor);
+		if(customTextSize != noFloat) dialogData.setTextSize(customTextSize);
+		if(customBg != noInt) dialogData.setBg(customBg);
+		if(customX != noInt) dialogData.setX(customX);	
+		if(customY != noInt) dialogData.setY(customY);
+		if(customWidth != noInt) dialogData.setWidth(customWidth);
+		if(customHeight != noInt) dialogData.setHeight(customHeight);
+		if(customGravity != noInt) dialogData.setGravity(customGravity);
+		if(customAnim != noInt) dialogData.setAnim(customAnim);
+		if(customItemBg != noInt) dialogData.setItemBg(customItemBg);
+		if(customMenus != noInt) dialogData.setMenus(context.getResources().getStringArray(customMenus));
 		dialogData.setTextAppearance(customTextAppearance);
 	}
 	

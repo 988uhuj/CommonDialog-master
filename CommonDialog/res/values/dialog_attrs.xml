@@ -13,14 +13,35 @@
     
     <declare-styleable name="AlertDialog">
     	<!-- Style of the alert dialog. -->
-        <attr name="titleTextSize" format="dimension"/>
-       	<attr name="titleTextColor" format="color"/>
-       	<attr name="title" format="string"/>
-       	<attr name="titleBackground" format="reference"/>
         <attr name="contentTextSize" format="dimension"/>
        	<attr name="contentTextColor" format="color"/>
        	<attr name="content" format="string"/>
        	<attr name="contentBackground" format="reference"/>
+    </declare-styleable>
+
+    
+    <!-- 对话框共有的属性 -->
+    <declare-styleable name="CommonDialog">
+    	<!-- Style of the base dialog. -->
+        <attr name="x" format="dimension" />
+        <attr name="y" format="dimension" />
+        <attr name="width" format="dimension" />
+        <attr name="height" format="dimension" />
+        <attr name="android:gravity" />
+        <attr name="anim" format="reference" />
+        <attr name="background" format="reference" />
+        
+        <attr name="autoDismiss" format="boolean" />
+        <attr name="showButtons" format="boolean" />
+        <attr name="type">
+            <enum name="list" value="1" />
+            <enum name="alert" value="2" />
+        </attr>
+        
+        <attr name="titleTextSize" format="dimension"/>
+       	<attr name="titleTextColor" format="color"/>
+       	<attr name="title" format="string"/>
+       	<attr name="titleBackground" format="reference"/>
        	
        	<attr name="positiveButton" format="boolean"/>
        	<attr name="positiveButtonText" format="string"/>
@@ -33,24 +54,6 @@
        	<attr name="buttonPadding" format="dimension"/>
        	<attr name="buttonMargin" format="dimension"/>
        	
-       	<attr name="btnBackground" format="reference" />
-        <attr name="titleTextAppearance" format="reference"/>
-        
-    </declare-styleable>
-
-    
-    <!-- 对话框共有的属性 -->
-    <declare-styleable name="CommonDialog">
-    	<!-- Style of the base dialog. -->
-        	<attr name="x" format="dimension" />
-        <attr name="y" format="dimension" />
-        <attr name="width" format="dimension" />
-        <attr name="height" format="dimension" />
-        <attr name="android:gravity" />
-        <attr name="anim" format="reference" />
-        <attr name="background" format="reference" />
-        
-        <attr name="autoDismiss" format="boolean" />
     </declare-styleable>
     
 </resources>

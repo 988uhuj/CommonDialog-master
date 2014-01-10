@@ -52,7 +52,9 @@
         <item name="background">@drawable/login_input</item>
         <!-- 点击按钮后自动隐藏。默认为true -->
         <item name="autoDismiss">false</item>
-        
+        <item name="type">alert</item>
+        <!-- 按钮栏显示开关，默认true -->
+        <!-- <item name="showButtons">false</item> -->
         
         <!-- 可覆盖Appearance中的属性 -->
         <!-- 自定义list item属性 -->
@@ -66,7 +68,7 @@
         <item name="content">"This is a content"</item>
         <item name="contentBackground">@drawable/btn_list_item</item>
         
-        <item name="positiveButton">true</item>
+        <item name="positiveButton">true</item> 
         <item name="positiveButtonText">"confirm"</item>
         <item name="positiveButtonBg">@drawable/btn_list_item</item>
         <!-- <item name="onPositiveClick">null</item> -->
