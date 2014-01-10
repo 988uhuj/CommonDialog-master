@@ -31,5 +31,9 @@ public class CDConstants {
 		public static int NO_GRAVITY = -1;
 		public static int NO_ITEMBG = -1;
 		public static int NO_MENUS = -1;
+		public static int NO_BG = -1;
+		
+		public static int NO_INT = -1;
+		public static float NO_FLOAT = -1.0f;
 	}
 }

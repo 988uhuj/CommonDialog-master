@@ -3,25 +3,54 @@
     
     <declare-styleable name="ListDialog">
         <!-- Style of the list dialog. -->
-        <attr name="x" format="dimension" />
+        <attr name="android:textSize" />
+       	<attr name="android:textColor"/>
+        <attr name="itemBackground" format="reference" />
+        <attr name="android:textAppearance" />
+        <attr name="stringArray" format="reference" />
+    </declare-styleable>
+    
+    
+    <declare-styleable name="AlertDialog">
+    	<!-- Style of the alert dialog. -->
+        <attr name="titleTextSize" format="dimension"/>
+       	<attr name="titleTextColor" format="color"/>
+       	<attr name="title" format="string"/>
+       	<attr name="titleBackground" format="reference"/>
+        <attr name="contentTextSize" format="dimension"/>
+       	<attr name="contentTextColor" format="color"/>
+       	<attr name="content" format="string"/>
+       	<attr name="contentBackground" format="reference"/>
+       	
+       	<attr name="positiveButton" format="boolean"/>
+       	<attr name="positiveButtonText" format="string"/>
+       	<attr name="positiveButtonBg" format="reference"/>
+       	<attr name="onPositiveClick" format="reference"/>
+       	<attr name="negativeButton" format="boolean"/>
+       	<attr name="negativeButtonText" format="string"/>
+       	<attr name="negativeButtonBg" format="reference"/>
+       	<attr name="onNegativeClick" format="reference"/>
+       	<attr name="buttonPadding" format="dimension"/>
+       	<attr name="buttonMargin" format="dimension"/>
+       	
+       	<attr name="btnBackground" format="reference" />
+        <attr name="titleTextAppearance" format="reference"/>
+        
+    </declare-styleable>
+
+    
+    <!-- 对话框共有的属性 -->
+    <declare-styleable name="CommonDialog">
+    	<!-- Style of the base dialog. -->
+        	<attr name="x" format="dimension" />
         <attr name="y" format="dimension" />
         <attr name="width" format="dimension" />
         <attr name="height" format="dimension" />
         <attr name="android:gravity" />
         <attr name="anim" format="reference" />
         <attr name="background" format="reference" />
-        <attr name="android:textSize" />
-       	<attr name="android:textColor"/>
-        <attr name="itemBackground" format="reference" />
-        <attr name="android:textAppearance" />
-        <attr name="stringArray" format="reference" />
         
-      	
+        <attr name="autoDismiss" format="boolean" />
     </declare-styleable>
     
-    
-    <declare-styleable name="Dialog">
-    	<attr name="type" format="string" />
-    </declare-styleable>
-
 </resources>

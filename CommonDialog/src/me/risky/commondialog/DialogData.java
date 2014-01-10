@@ -1,6 +1,5 @@
 package me.risky.commondialog;
 
-import android.graphics.drawable.Drawable;
 /**
  * 
  * Dialog数据和属性封装类
@@ -18,7 +17,7 @@ public class DialogData {
 	private Integer x;
 	private Integer y;
 	private Integer gravity;
-	private Drawable bg;
+	private Integer bg;
 	private boolean showCancelBtn;
 	private Integer padding;
 	private Float textSize;
@@ -78,12 +77,6 @@ public class DialogData {
 	public void setGravity(Integer gravity) {
 		this.gravity = gravity;
 	}
-	public Drawable getBg() {
-		return bg;
-	}
-	public void setBg(Drawable bg) {
-		this.bg = bg;
-	}
 	public boolean isShowCancelBtn() {
 		return showCancelBtn;
 	}
@@ -125,6 +118,12 @@ public class DialogData {
 	}
 	public void setTextAppearance(Integer textAppearance) {
 		this.textAppearance = textAppearance;
+	}
+	public Integer getBg() {
+		return bg;
+	}
+	public void setBg(Integer bg) {
+		this.bg = bg;
 	}
 
 	

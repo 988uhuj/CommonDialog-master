@@ -6,8 +6,6 @@ import me.risky.commondialog.ListViewAdapter.OnListItemClickListener;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Window;
@@ -67,7 +65,7 @@ public class CommonListDialog extends Dialog {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.common_dialog);
+		setContentView(R.layout.common_list_dialog);
 		
 		findView();
 		initComponent();
@@ -98,21 +96,26 @@ public class CommonListDialog extends Dialog {
 		final int noGravity = CDConstants.DEF_NO_VALUE.NO_GRAVITY;
 		final int noItemBg = CDConstants.DEF_NO_VALUE.NO_ITEMBG;
 		final int noMenus = CDConstants.DEF_NO_VALUE.NO_MENUS;
+		final int noBg = CDConstants.DEF_NO_VALUE.NO_BG;
+		
+		
+		TypedArray commonTypedArray = context.obtainStyledAttributes(style, R.styleable.CommonDialog);
+		
+		int customBg = commonTypedArray.getResourceId(R.styleable.CommonDialog_background, noBg); 
+		int customX = (int) commonTypedArray.getDimension(R.styleable.CommonDialog_x, noX);
+		int customY = (int) commonTypedArray.getDimension(R.styleable.CommonDialog_y, noY);
+		int customWidth = (int) commonTypedArray.getDimension(R.styleable.CommonDialog_width, 0);
+		int customHeight = (int) commonTypedArray.getDimension(R.styleable.CommonDialog_height, 0);
+		int customGravity = commonTypedArray.getInteger(R.styleable.CommonDialog_android_gravity, noGravity);
+		int customAnim = commonTypedArray.getResourceId(R.styleable.CommonDialog_anim, noAnim);
+		commonTypedArray.recycle();
 		
 		
 		// 从Style配置中读取数据
 		TypedArray typedArray = context.obtainStyledAttributes(style, R.styleable.ListDialog);
 		
-		int customTextColor = typedArray.getColor(R.styleable.ListDialog_android_textColor, noTextColor); 
 		float customTextSize = typedArray.getDimension(R.styleable.ListDialog_android_textSize, noTextSize); 
-		Drawable customBg = typedArray.getDrawable(R.styleable.ListDialog_background); 
-		int customX = (int) typedArray.getDimension(R.styleable.ListDialog_x, noX);
-		int customY = (int) typedArray.getDimension(R.styleable.ListDialog_y, noY);
-		int customWidth = (int) typedArray.getDimension(R.styleable.ListDialog_width, noWidth);
-		int customHeight = (int) typedArray.getDimension(R.styleable.ListDialog_height, noHeight);
-		int customGravity = typedArray.getInteger(R.styleable.ListDialog_android_gravity, noGravity);
-		int customAnim = typedArray.getResourceId(R.styleable.ListDialog_anim, noAnim);
-//		Drawable customItemBg = typedArray.getDrawable(R.styleable.ListDialog_itemBackground);	// 不能获取drawable 按下的效果
+		int customTextColor = typedArray.getColor(R.styleable.ListDialog_android_textColor, noTextColor);
 		int customItemBg = typedArray.getResourceId(R.styleable.ListDialog_itemBackground, noItemBg);
 		int customMenus = typedArray.getResourceId(R.styleable.ListDialog_stringArray, noMenus);
 		int customTextAppearance = typedArray.getResourceId(R.styleable.ListDialog_android_textAppearance, -1);
@@ -123,7 +126,7 @@ public class CommonListDialog extends Dialog {
 		// 保存配置数据
 		if(customTextColor != noTextColor) dialogData.setTextColor(customTextColor);
 		if(customTextSize != noTextSize) dialogData.setTextSize(customTextSize);
-		if(customBg != null) dialogData.setBg(customBg);
+		if(customBg != noBg) dialogData.setBg(customBg);
 		if(customX != noX) dialogData.setX(customX);	
 		if(customY != noY) dialogData.setY(customY);
 		if(customWidth != noWidth) dialogData.setWidth(customWidth);
@@ -140,18 +143,11 @@ public class CommonListDialog extends Dialog {
 		layout = (RelativeLayout) findViewById(R.id.main);
 	}
 	
-	@SuppressWarnings("deprecation")
 	private void initComponent(){
 		listView.setAdapter(listViewAdapter);
 		
 		// --------------通过保存的属性设置相应控件的样式----------------
-		if(dialogData.getBg() != null){
-			if(Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN){
-				layout.setBackgroundDrawable(dialogData.getBg());
-			}else{
-				layout.setBackground(dialogData.getBg());
-			}
-		}
+		if(dialogData.getBg() != null) layout.setBackgroundResource(dialogData.getBg());
 		if(dialogData.getPadding() != null) layout.setPadding(dialogData.getPadding(), dialogData.getPadding(), dialogData.getPadding(), dialogData.getPadding());
 		if(dialogData.getTextColor() != null) listViewAdapter.setTextColor(dialogData.getTextColor());
 		if(dialogData.getTextSize() != null) listViewAdapter.setTextSize(dialogData.getTextSize());
@@ -226,9 +222,6 @@ public class CommonListDialog extends Dialog {
 		dialogData.setGravity(gravity);
 	}
 	
-	public void setBackground(Drawable d){
-		dialogData.setBg(d);
-	}
 	public void setItemView(int res){
 		listViewAdapter.setItemView(res);
 	}
@@ -248,6 +241,8 @@ public class CommonListDialog extends Dialog {
 	public void setAnim(int style){
 		dialogData.setAnim(style);
 	}
-	
+	public void setBackground(int bg){
+		dialogData.setBg(bg);
+	}
 	
 }

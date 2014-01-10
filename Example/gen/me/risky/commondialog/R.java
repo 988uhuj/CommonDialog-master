@@ -25,15 +25,35 @@ public final class R {
 		public static final int translate_up_to_down = 0x7f04000e;
 	}
 	public static final class attr {
-		public static final int anim = 0x7f010004;
-		public static final int background = 0x7f010005;
-		public static final int height = 0x7f010003;
-		public static final int itemBackground = 0x7f010006;
-		public static final int stringArray = 0x7f010007;
-		public static final int type = 0x7f010008;
-		public static final int width = 0x7f010002;
-		public static final int x = 0x7f010000;
-		public static final int y = 0x7f010001;
+		public static final int anim = 0x7f01001a;
+		public static final int autoDismiss = 0x7f01001c;
+		public static final int background = 0x7f01001b;
+		public static final int btnBackground = 0x7f010014;
+		public static final int buttonMargin = 0x7f010013;
+		public static final int buttonPadding = 0x7f010012;
+		public static final int content = 0x7f010008;
+		public static final int contentBackground = 0x7f010009;
+		public static final int contentTextColor = 0x7f010007;
+		public static final int contentTextSize = 0x7f010006;
+		public static final int height = 0x7f010019;
+		public static final int itemBackground = 0x7f010000;
+		public static final int negativeButton = 0x7f01000e;
+		public static final int negativeButtonBg = 0x7f010010;
+		public static final int negativeButtonText = 0x7f01000f;
+		public static final int onNegativeClick = 0x7f010011;
+		public static final int onPositiveClick = 0x7f01000d;
+		public static final int positiveButton = 0x7f01000a;
+		public static final int positiveButtonBg = 0x7f01000c;
+		public static final int positiveButtonText = 0x7f01000b;
+		public static final int stringArray = 0x7f010001;
+		public static final int title = 0x7f010004;
+		public static final int titleBackground = 0x7f010005;
+		public static final int titleTextAppearance = 0x7f010015;
+		public static final int titleTextColor = 0x7f010003;
+		public static final int titleTextSize = 0x7f010002;
+		public static final int width = 0x7f010018;
+		public static final int x = 0x7f010016;
+		public static final int y = 0x7f010017;
 	}
 	public static final class color {
 		public static final int light_gray = 0x7f050000;
@@ -54,39 +74,69 @@ public final class R {
 		public static final int login_input = 0x7f02000a;
 	}
 	public static final class id {
-		public static final int itemBtn = 0x7f0b0003;
-		public static final int listview = 0x7f0b0002;
+		public static final int buttonLayout = 0x7f0b0004;
+		public static final int content = 0x7f0b0003;
+		public static final int itemBtn = 0x7f0b000a;
+		public static final int listview = 0x7f0b0009;
 		public static final int main = 0x7f0b0001;
+		public static final int negativeBtn = 0x7f0b0008;
+		public static final int negativeLayout = 0x7f0b0007;
+		public static final int positiveBtn = 0x7f0b0006;
+		public static final int positiveLayout = 0x7f0b0005;
+		public static final int title = 0x7f0b0002;
 	}
 	public static final class layout {
-		public static final int common_dialog = 0x7f030001;
-		public static final int listview_item = 0x7f030002;
+		public static final int common_alert_dialog = 0x7f030001;
+		public static final int common_list_dialog = 0x7f030002;
+		public static final int listview_item = 0x7f030003;
 	}
 	public static final class style {
-		public static final int AppBaseTheme = 0x7f060007;
+		public static final int AppBaseTheme = 0x7f060008;
 		public static final int TextAppearance_itemText = 0x7f060002;
+		public static final int Theme_CommonAlertDialog = 0x7f060003;
 		public static final int Theme_CommonListDialog = 0x7f060000;
 		public static final int Widget = 0x7f060001;
-		public static final int common_dialog_window_anim_bottom = 0x7f060004;
-		public static final int common_dialog_window_anim_left = 0x7f060005;
-		public static final int common_dialog_window_anim_right = 0x7f060006;
-		public static final int common_dialog_window_anim_top = 0x7f060003;
+		public static final int common_dialog_window_anim_bottom = 0x7f060005;
+		public static final int common_dialog_window_anim_left = 0x7f060006;
+		public static final int common_dialog_window_anim_right = 0x7f060007;
+		public static final int common_dialog_window_anim_top = 0x7f060004;
 	}
 	public static final class styleable {
-		public static final int[] Dialog = { 0x7f010008 };
-		public static final int Dialog_type = 0;
-		public static final int[] ListDialog = { 0x01010034, 0x01010095, 0x01010098, 0x010100af, 0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003, 0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007 };
-		public static final int ListDialog_android_gravity = 3;
+		public static final int[] AlertDialog = { 0x7f010002, 0x7f010003, 0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007, 0x7f010008, 0x7f010009, 0x7f01000a, 0x7f01000b, 0x7f01000c, 0x7f01000d, 0x7f01000e, 0x7f01000f, 0x7f010010, 0x7f010011, 0x7f010012, 0x7f010013, 0x7f010014, 0x7f010015 };
+		public static final int AlertDialog_btnBackground = 18;
+		public static final int AlertDialog_buttonMargin = 17;
+		public static final int AlertDialog_buttonPadding = 16;
+		public static final int AlertDialog_content = 6;
+		public static final int AlertDialog_contentBackground = 7;
+		public static final int AlertDialog_contentTextColor = 5;
+		public static final int AlertDialog_contentTextSize = 4;
+		public static final int AlertDialog_negativeButton = 12;
+		public static final int AlertDialog_negativeButtonBg = 14;
+		public static final int AlertDialog_negativeButtonText = 13;
+		public static final int AlertDialog_onNegativeClick = 15;
+		public static final int AlertDialog_onPositiveClick = 11;
+		public static final int AlertDialog_positiveButton = 8;
+		public static final int AlertDialog_positiveButtonBg = 10;
+		public static final int AlertDialog_positiveButtonText = 9;
+		public static final int AlertDialog_title = 2;
+		public static final int AlertDialog_titleBackground = 3;
+		public static final int AlertDialog_titleTextAppearance = 19;
+		public static final int AlertDialog_titleTextColor = 1;
+		public static final int AlertDialog_titleTextSize = 0;
+		public static final int[] CommonDialog = { 0x010100af, 0x7f010016, 0x7f010017, 0x7f010018, 0x7f010019, 0x7f01001a, 0x7f01001b, 0x7f01001c };
+		public static final int CommonDialog_android_gravity = 0;
+		public static final int CommonDialog_anim = 5;
+		public static final int CommonDialog_autoDismiss = 7;
+		public static final int CommonDialog_background = 6;
+		public static final int CommonDialog_height = 4;
+		public static final int CommonDialog_width = 3;
+		public static final int CommonDialog_x = 1;
+		public static final int CommonDialog_y = 2;
+		public static final int[] ListDialog = { 0x01010034, 0x01010095, 0x01010098, 0x7f010000, 0x7f010001 };
 		public static final int ListDialog_android_textAppearance = 0;
 		public static final int ListDialog_android_textColor = 2;
 		public static final int ListDialog_android_textSize = 1;
-		public static final int ListDialog_anim = 8;
-		public static final int ListDialog_background = 9;
-		public static final int ListDialog_height = 7;
-		public static final int ListDialog_itemBackground = 10;
-		public static final int ListDialog_stringArray = 11;
-		public static final int ListDialog_width = 6;
-		public static final int ListDialog_x = 4;
-		public static final int ListDialog_y = 5;
+		public static final int ListDialog_itemBackground = 3;
+		public static final int ListDialog_stringArray = 4;
 	}
 }
