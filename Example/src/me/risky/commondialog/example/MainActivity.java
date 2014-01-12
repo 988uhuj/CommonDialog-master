@@ -6,13 +6,11 @@ import java.util.List;
 import java.util.Map;
 
 import me.risky.commondialog.CDConstants;
-import me.risky.commondialog.CommonListDialog;
-import me.risky.commondialog.alert.CommonAlertDialog;
+import me.risky.commondialog.CommonDialog;
+import me.risky.commondialog.list.ListViewAdapter.OnListItemClickListener;
 import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
-import android.view.Gravity;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -32,11 +30,11 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		List<String> list = new ArrayList<String>();
-		list.add("showDialogByMap");
-		list.add("showDialogByString");
-		list.add("showCustomDialog");
-		list.add("showThemeDialog");
-		list.add("showAlertDialog");
+		list.add("showDefaultDialogByMap");
+		list.add("showDefaultDialogByString");
+		list.add("showDefaultAlertDialog");
+		list.add("showCustomThemeListDialog");
+		list.add("showCustomThemeAlertDialog");
 		
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list);
 		
@@ -49,19 +47,19 @@ public class MainActivity extends Activity {
 					long arg3) {
 				switch(position){
 				case 0:
-					showDialogByMap();
+					showDefaulDialogByMap();
 					break;
 				case 1:
-					showDialogByString();
+					showDefaulDialogByString();
 					break;
 				case 2:
-					showCustomDialog();
+					showDefaultAlertDialog();
 					break;
 				case 3:
-					showThemeDialog();
+					showCustomThemeListDialog();
 					break;
 				case 4:
-					showAlertDialog();
+					showCustomThemeAlertDialog();
 					break;
 				default:
 					break;
@@ -106,47 +104,43 @@ public class MainActivity extends Activity {
     	return list;
     }
     
-    private void showDialogByMap(){
-    	CommonListDialog dialog = new CommonListDialog(this);
+    private void showDefaulDialogByMap(){
+    	CommonDialog dialog = CommonDialog.create(this, CDConstants.DEFAULT_THEME_LIST);
     	dialog.setData(testAddDataMap());
     	dialog.show();
     }
     
-    private void showDialogByString(){
-    	CommonListDialog commonDialog = new CommonListDialog(this);
-    	commonDialog.setData(testAddDataString());
-		commonDialog.show();
+    private void showDefaulDialogByString(){
+    	CommonDialog dialog = CommonDialog.create(this, CDConstants.DEFAULT_THEME_LIST);
+    	dialog.setData(testAddDataString());
+    	dialog.show();
     }
     
-    private void showCustomDialog(){
-    	// show full screen
-    	DisplayMetrics dm = new DisplayMetrics();
-    	getWindowManager().getDefaultDisplay().getMetrics(dm);
-    	int dispWidth = dm.widthPixels;
-    	
-    	CommonListDialog commonDialog = new CommonListDialog(this);
-    	commonDialog.setData(testAddDataString());
-    	commonDialog.setBackground(R.drawable.login_input);
-    	commonDialog.setGravity(Gravity.TOP);
-    	commonDialog.setWidth(dispWidth);
-    	commonDialog.setPadding(20);
-    	commonDialog.setAnim(R.style.common_dialog_window_anim_top);
-		commonDialog.show();
+    private void showDefaultAlertDialog(){
+    	CommonDialog dialog = CommonDialog.create(this, CDConstants.DEFAULT_THEME_ALERT);
+    	dialog.show();
     }
     
-    private void showThemeDialog(){
-    	CommonListDialog commonDialog = new CommonListDialog(this, R.style.MyDialog);
-		commonDialog.show();
+    
+    private void showCustomThemeListDialog(){
+    	CommonDialog dialog = CommonDialog.create(this, R.style.MyListDialog);
+		dialog.setOnListItemClickListener(new OnListItemClickListener() {
+			
+			@Override
+			public void onListItemClick(int position) {
+				Toast.makeText(getApplicationContext(), "This is " + position, Toast.LENGTH_SHORT).show();
+			}
+		});
+    	dialog.show();
     }
     
-    private void showAlertDialog(){
-    	CommonAlertDialog dialog = new CommonAlertDialog(this);
+    private void showCustomThemeAlertDialog(){
+    	CommonDialog dialog = CommonDialog.create(this, R.style.MyAlertDialog);
     	dialog.setOnPositiveClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				Toast.makeText(getApplicationContext(), "This is PositiveBtn.", Toast.LENGTH_SHORT).show();
-				
 			} 
 		});
     	dialog.setOnNegativeClickListener(new OnClickListener(){
@@ -154,12 +148,11 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				Toast.makeText(getApplicationContext(), "This is NegativeBtn.", Toast.LENGTH_SHORT).show();
-				
 			}
     		
     	});
     	dialog.show();
+    	
     }
-    
     
 }

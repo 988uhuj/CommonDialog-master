@@ -1,10 +1,12 @@
-package me.risky.commondialog;
+package me.risky.commondialog.list;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
+import me.risky.commondialog.CDConstants;
+import me.risky.commondialog.R;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.util.Log;
@@ -67,7 +69,7 @@ public class ListViewAdapter extends BaseAdapter {
 	public void setList(List<Object> list){
 		listAdapterData.setList(list);
 		if(listAdapterData.getList().get(0) instanceof Map){
-			Log.d(TAG, "map");
+			Log.d(TAG, "Map");
 			listAdapterData.setMap(true);
 		}else{
 			Log.d(TAG, "String");
@@ -80,6 +82,13 @@ public class ListViewAdapter extends BaseAdapter {
 	 */
 	public void setArray(Object[] array){
 		listAdapterData.setList(Arrays.asList(array));
+		if(listAdapterData.getList().get(0) instanceof Map){
+			Log.d(TAG, "Map");
+			listAdapterData.setMap(true);
+		}else{
+			Log.d(TAG, "String");
+			listAdapterData.setMap(false);
+		}
 	}
 	
 	@Override
@@ -108,7 +117,9 @@ public class ListViewAdapter extends BaseAdapter {
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}
-		
+		// 设置样式
+		setStyle(holder.textView);
+		// 设置数据
 		if(listAdapterData.isMap()){
 			// map 时包含自定义属性
 			Map<String, Object> item = (Map<String, Object>)listAdapterData.getList().get(position); // 获取当前项数据
@@ -118,7 +129,7 @@ public class ListViewAdapter extends BaseAdapter {
 			String item = (String) listAdapterData.getList().get(position);
 			setItemAttr(holder.textView, item, position);
 		}
-		setStyle(holder.textView);
+		
 		return convertView;
 	}
 	

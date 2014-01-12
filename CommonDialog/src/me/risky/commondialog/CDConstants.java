@@ -1,6 +1,10 @@
 package me.risky.commondialog;
 
 public class CDConstants {
+	
+	public final static int DEFAULT_THEME_LIST = R.style.Theme_CommonListDialog;
+	public final static int DEFAULT_THEME_ALERT = R.style.Theme_CommonAlertDialog;
+	
 	/**
 	 * 定义Map数据源的key值
 	 *
@@ -21,21 +25,8 @@ public class CDConstants {
 	 *
 	 */
 	public static class DEF_NO_VALUE{
-//		public static int NO_TEXTCOLOR = -1;
-//		public static float NO_TEXTSIZE = -1;
-//		public static int NO_X = 0;
-//		public static int NO_Y = 0;
-//		public static int NO_WIDTH = -1;
-//		public static int NO＿HEIGHT = -1;
-//		public static int NO_ANIM = -1;
-//		public static int NO_GRAVITY = -1;
-//		public static int NO_ITEMBG = -1;
-//		public static int NO_MENUS = -1;
-//		public static int NO_DRAWABLE = -1;
-		
 		public static int NO_INT = -1;
 		public static float NO_FLOAT = -1.0f;
-		
 	}
 	
 	public static class DEF_DIALOG_TYPE{

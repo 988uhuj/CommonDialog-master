@@ -1,18 +1,20 @@
 package me.risky.commondialog.alert;
 
 import me.risky.commondialog.CDConstants;
+import me.risky.commondialog.CommonDialog;
 import me.risky.commondialog.R;
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.os.Bundle;
 import android.widget.TextView;
 
-public class CommonAlertDialog extends BaseDialog{
+public class CommonAlertDialog extends CommonDialog{
 	
 	private TextView contentTV;
 	private static final int[] attrs = R.styleable.AlertDialog;
 
 	public CommonAlertDialog(Context context){
-		super(context, R.style.Theme_CommonAlertDialog);
+		super(context, CDConstants.DEFAULT_THEME_ALERT);
 	}
 	
 	public CommonAlertDialog(Context context, int style){
@@ -34,6 +36,7 @@ public class CommonAlertDialog extends BaseDialog{
 		float customContentTextSize = typedArray.getDimension(R.styleable.AlertDialog_contentTextSize, noInt); 
 		String customContent = typedArray.getString(R.styleable.AlertDialog_content); 
 		int customContentBg = typedArray.getResourceId(R.styleable.AlertDialog_contentBackground, noInt);
+		int customTextAppearance = typedArray.getResourceId(R.styleable.AlertDialog_contentTextAppearance, noInt);
 		typedArray.recycle();
 		
 		// ----------------- ±£¥Ê≈‰÷√ ˝æ› ---------------------
@@ -43,10 +46,18 @@ public class CommonAlertDialog extends BaseDialog{
 		if(customContentTextSize != noInt) dialogData.setContentTextSize(customContentTextSize);
 		if(customContent != null) dialogData.setContent(customContent);
 		if(customContentBg != noInt) dialogData.setContentBackground(customContentBg);
+		if(customTextAppearance != noInt) dialogData.setAlertContentTextApperance(customTextAppearance);
 		
 	}
 	
 	
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		setContentView(R.layout.common_alert_dialog);
+		super.onCreate(savedInstanceState);
+	}
+
 	@Override
 	protected void findView(){
 		super.findView();
@@ -57,6 +68,7 @@ public class CommonAlertDialog extends BaseDialog{
 	protected void initComponent() {
 		super.initComponent();
 		
+		if(dialogData.getAlertContentTextApperance() != null) contentTV.setTextAppearance(context, dialogData.getAlertContentTextApperance());
 		if(dialogData.getContent() != null) contentTV.setText(dialogData.getContent());
 		if(dialogData.getContentTextColor() != null) contentTV.setTextColor(dialogData.getContentTextColor());
 		if(dialogData.getContentTextSize() != null) contentTV.setTextSize(dialogData.getContentTextSize());

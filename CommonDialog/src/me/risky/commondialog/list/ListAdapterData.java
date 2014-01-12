@@ -1,4 +1,4 @@
-package me.risky.commondialog;
+package me.risky.commondialog.list;
 
 import java.util.ArrayList;
 import java.util.List;

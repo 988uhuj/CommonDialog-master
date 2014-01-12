@@ -17,6 +17,7 @@
        	<attr name="contentTextColor" format="color"/>
        	<attr name="content" format="string"/>
        	<attr name="contentBackground" format="reference"/>
+       	<attr name="contentTextAppearance" format="reference"/>
     </declare-styleable>
 
     
@@ -27,6 +28,8 @@
         <attr name="y" format="dimension" />
         <attr name="width" format="dimension" />
         <attr name="height" format="dimension" />
+        <attr name="widthFraction" format="fraction" />
+        <attr name="heightFraction" format="fraction" />
         <attr name="android:gravity" />
         <attr name="anim" format="reference" />
         <attr name="background" format="reference" />

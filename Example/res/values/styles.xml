@@ -18,28 +18,63 @@
     </style>
     
     
-    <!-- 自定义对话框Style -->
-    <style name="MyDialog" parent="Theme.CommonListDialog">
-        <item name="android:padding">10dp</item> 
-        <item name="android:gravity">center</item>
-        <item name="width">300dp</item>
-        <item name="height">300dp</item>
+    
+    <!-- 自定义 listStyle -->
+    <style name="MyListDialog" parent="Theme.CommonListDialog">
+        <item name="type">list</item>
+        <item name="android:gravity">top</item>
         <item name="background">@drawable/login_input</item>
-        <!-- 偏移量 -->
-        <item name="x">100dp</item>
-        <item name="y">100dp</item>
+        <item name="widthFraction">100%</item>
         <item name="android:textAppearance">@style/TextApperance</item>
         <!-- 配置数据源，直接显示数据 -->
         <item name="stringArray">@array/city</item>	
-        <item name="itemBackground">@drawable/btn_list_item2</item>
+        <item name="itemBackground">@drawable/btn_list_item</item>
     </style>
     
     
     <!-- 自定义对话框中item -->
    	<style name="TextApperance" parent="Widget">
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@color/light_gray</item>
+        <item name="android:textColor">@color/transparentgray</item>
         <item name="android:textSize">11sp</item>
+    </style>
+    
+   	
+   	
+   	<!-- 自定义 alertStyle -->
+   	<style name="MyAlertDialog" parent="Theme.CommonAlertDialog">
+        <!-- 自定义窗口属性 -->
+        <item name="android:gravity">center</item>
+        <item name="anim">@style/common_dialog_window_anim_top</item>
+        <item name="background">@drawable/login_input</item>
+        <!-- 点击按钮后自动隐藏。默认为true -->
+        <item name="autoDismiss">false</item>
+        <item name="type">alert</item>
+        <!-- 按钮栏显示开关，默认true -->
+        <!-- <item name="showButtons">false</item> -->
+        
+        <!-- 可覆盖Appearance中的属性 -->
+        <!-- 自定义list item属性 -->
+        <item name="titleTextColor">@color/light_gray</item>
+        <item name="titleTextSize">24sp</item>
+        <item name="title">"Toast"</item>
+        <item name="titleBackground">@drawable/btn_list_item</item>
+        
+       	<item name="contentTextColor">@color/transparentgray</item>
+        <item name="contentTextSize">12sp</item>
+        <item name="content">"Do you want to exit?"</item>
+        <item name="contentBackground">@drawable/btn_list_item</item>
+        
+        <item name="positiveButton">true</item> 
+        <item name="positiveButtonText">"confirm"</item>
+        <item name="positiveButtonBg">@drawable/btn_list_item</item>
+        <item name="negativeButton">true</item>
+        <item name="negativeButtonText">"cancel"</item>
+        <item name="negativeButtonBg">@drawable/btn_list_item</item>
+        <item name="buttonPadding">0dp</item>
+        <item name="buttonMargin">2dp</item>
+        
+      	<item name="android:textAppearance">@style/TextAppearance.itemText</item>
     </style>
     
     
