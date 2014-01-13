@@ -1,23 +1,22 @@
 package me.risky.commondialog.alert;
 
-import me.risky.commondialog.CDConstants;
-import me.risky.commondialog.CommonDialog;
+import me.risky.commondialog.DConstants;
+import me.risky.commondialog.DisplayDialog;
 import me.risky.commondialog.R;
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.os.Bundle;
 import android.widget.TextView;
 
-public class CommonAlertDialog extends CommonDialog{
+public class DisplayAlert extends DisplayDialog{
 	
 	private TextView contentTV;
 	private static final int[] attrs = R.styleable.AlertDialog;
 
-	public CommonAlertDialog(Context context){
-		super(context, CDConstants.DEFAULT_THEME_ALERT);
+	public DisplayAlert(Context context){
+		super(context, DConstants.DEFAULT_THEME_ALERT);
 	}
 	
-	public CommonAlertDialog(Context context, int style){
+	public DisplayAlert(Context context, int style){
 		super(context, style);
 	}
 	
@@ -26,8 +25,8 @@ public class CommonAlertDialog extends CommonDialog{
 		super.initData(style);
 		//---------------------读取保存共有属性结束-----------------------
 		// 无配置信息时的默认值
-		final float noFloat = CDConstants.DEF_NO_VALUE.NO_FLOAT;
-		final int noInt = CDConstants.DEF_NO_VALUE.NO_INT;
+		final float noFloat = DConstants.DEF_NO_VALUE.NO_FLOAT;
+		final int noInt = DConstants.DEF_NO_VALUE.NO_INT;
 		
 		// 读取私有属性
 		TypedArray typedArray = context.obtainStyledAttributes(style, attrs);
@@ -50,18 +49,11 @@ public class CommonAlertDialog extends CommonDialog{
 		
 	}
 	
-	
-	
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		setContentView(R.layout.common_alert_dialog);
-		super.onCreate(savedInstanceState);
-	}
 
 	@Override
 	protected void findView(){
 		super.findView();
-		contentTV = (TextView) findViewById(R.id.content);
+		contentTV = (TextView) baseView.findViewById(R.id.content);
 	}
 	
 	@Override
@@ -75,5 +67,20 @@ public class CommonAlertDialog extends CommonDialog{
 		if(dialogData.getContentBackground() != null) contentTV.setBackgroundResource(dialogData.getContentBackground());
 	}
 
+	@Override
+	public void setContent(String content) {
+		super.setContent(content);
+		dialogData.setContent(content);
+	}
+
+	@Override
+	public void setContent(int resId) {
+		super.setContent(resId);
+		String content = context.getString(resId);
+		dialogData.setContent(content);
+	}
+
+	
+	
 	
 }

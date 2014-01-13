@@ -2,8 +2,8 @@ package me.risky.commondialog;
 
 import java.util.List;
 
-import me.risky.commondialog.alert.CommonAlertDialog;
-import me.risky.commondialog.list.CommonListDialog;
+import me.risky.commondialog.alert.DisplayAlert;
+import me.risky.commondialog.list.DisplayList;
 import me.risky.commondialog.list.ListViewAdapter.OnListItemClickListener;
 import android.app.Activity;
 import android.app.Dialog;
@@ -12,6 +12,7 @@ import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -20,10 +21,10 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-public class CommonDialog extends Dialog implements IDialog{
+public class DisplayDialog extends Dialog implements IDisplay{
 	
 	protected Context context;
-	protected DialogData dialogData;
+	protected DisplayData dialogData;
 	private TextView titleTV;
 	
 	private ViewGroup mainLayout;
@@ -32,18 +33,19 @@ public class CommonDialog extends Dialog implements IDialog{
 	private ViewGroup positiveLayout;
 	private ViewGroup negativeLayout;
 	private LinearLayout buttonLayout;
+	protected ViewGroup baseView;
 	
-	private static final int style = R.style.Theme_CommonAlertDialog;
+	private static final int style = R.style.CommonAlertDialog;
 	private static final int[] attrs = R.styleable.CommonDialog;
 
-	protected CommonDialog(Context context) {
+	protected DisplayDialog(Context context) {
 		super(context, style);
 		this.context = context;
 		
 		initData(style);
 	}
 	
-	protected CommonDialog(Context context, int style){
+	protected DisplayDialog(Context context, int style){
 		super(context, style);
 		this.context = context;
 		
@@ -52,14 +54,14 @@ public class CommonDialog extends Dialog implements IDialog{
 	
 	
 	protected void initData(){
-		dialogData = new DialogData();
+		dialogData = new DisplayData();
 	}
 	
 	protected void initData(int style){
 		initData();
 		// 无配置信息时的默认值
-		final int noInt = CDConstants.DEF_NO_VALUE.NO_INT;
-		final float noFloat = CDConstants.DEF_NO_VALUE.NO_FLOAT;
+		final int noInt = DConstants.DEF_NO_VALUE.NO_INT;
+		final float noFloat = DConstants.DEF_NO_VALUE.NO_FLOAT;
 		
 		//---------------------读取保存共有属性-----------------------
 		
@@ -84,7 +86,8 @@ public class CommonDialog extends Dialog implements IDialog{
 		float customTitleTextSize = commonTypedArray.getDimension(R.styleable.CommonDialog_titleTextSize, noInt); 
 		String customTitle = commonTypedArray.getString(R.styleable.CommonDialog_title);
 		int customTitleBg = commonTypedArray.getResourceId(R.styleable.CommonDialog_titleBackground, noInt);
-
+		int customTitleTextAppearance = commonTypedArray.getResourceId(R.styleable.CommonDialog_titleTextAppearance,  noInt);
+		
 		// Button
 		boolean customIsShowPositiveBtn = commonTypedArray.getBoolean(R.styleable.CommonDialog_positiveButton, true);
 		String customPositiveBtnText = commonTypedArray.getString(R.styleable.CommonDialog_positiveButtonText);
@@ -95,6 +98,7 @@ public class CommonDialog extends Dialog implements IDialog{
 		
 		int customButtonPadding = (int)commonTypedArray.getDimension(R.styleable.CommonDialog_buttonPadding, noFloat);
 		int customButtonMargin = (int)commonTypedArray.getDimension(R.styleable.CommonDialog_buttonMargin, noFloat);
+		int customButtonTextAppearance = commonTypedArray.getResourceId(R.styleable.CommonDialog_buttonTextAppearance, noInt);
 		commonTypedArray.recycle();
 		
 		
@@ -118,6 +122,7 @@ public class CommonDialog extends Dialog implements IDialog{
 		if(customTitleTextSize != noInt) dialogData.setTitleTextSize(customTitleTextSize);
 		if(customTitle != null) dialogData.setTitle(customTitle);
 		if(customTitleBg != noInt) dialogData.setTitleBackground(customTitleBg);
+		if(customTitleTextAppearance != noInt) dialogData.setTitleTextAppearance(customTitleTextAppearance);
 		
 		// Save button
 		dialogData.setShowPositiveBtn(customIsShowPositiveBtn);
@@ -127,16 +132,16 @@ public class CommonDialog extends Dialog implements IDialog{
 		if(customNegativeBtnText != null)dialogData.setNegativeBtnText(customNegativeBtnText);
 		if(customNegativeBg != noInt) dialogData.setNegativeBtnBg(customNegativeBg);
 		if(customButtonPadding != noFloat) dialogData.setButtonPadding(customButtonPadding);
-		if(customButtonMargin != noFloat) dialogData.setButtonMargin(customButtonMargin);		
+		if(customButtonMargin != noFloat) dialogData.setButtonMargin(customButtonMargin);	
+		if(customButtonTextAppearance != noInt) dialogData.setButtonTextAppearance(customButtonTextAppearance);
 	}
 	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
-//		setContentView(R.layout.common_alert_dialog);
-		
+		setContentView(R.layout.diaplay_base);
+		setTypeView();
 		findView();
 		initComponent();
 	}
@@ -150,6 +155,7 @@ public class CommonDialog extends Dialog implements IDialog{
 		positiveLayout = (ViewGroup) findViewById(R.id.positiveLayout);
 		negativeLayout = (ViewGroup) findViewById(R.id.negativeLayout);
 		buttonLayout = (LinearLayout) findViewById(R.id.buttonLayout);
+		
 	}
 		
 	protected void initComponent(){
@@ -158,6 +164,7 @@ public class CommonDialog extends Dialog implements IDialog{
 		if(dialogData.getPadding() != null) mainLayout.setPadding(dialogData.getPadding(), dialogData.getPadding(), dialogData.getPadding(), dialogData.getPadding());
 		
 		if(dialogData.getTitle() != null) titleTV.setText(dialogData.getTitle()); else titleTV.setVisibility(View.GONE);
+		if(dialogData.getTitleTextAppearance() != null) titleTV.setTextAppearance(context, dialogData.getTitleTextAppearance());
 		if(dialogData.getTitleTextColor() != null) titleTV.setTextColor(dialogData.getTitleTextColor());
 		if(dialogData.getTitleTextSize() != null) titleTV.setTextSize(dialogData.getTitleTextSize());
 		if(dialogData.getTitleBackground() != null) titleTV.setBackgroundResource(dialogData.getTitleBackground());
@@ -165,16 +172,22 @@ public class CommonDialog extends Dialog implements IDialog{
 		if(dialogData.isShowPositiveBtn() == false) positiveBtn.setVisibility(View.GONE);
 		if(dialogData.getPositiveBtnText() != null) positiveBtn.setText(dialogData.getPositiveBtnText());
 		if(dialogData.getPositiveBtnBg() != null) positiveBtn.setBackgroundResource(dialogData.getPositiveBtnBg());
-		if(dialogData.getOnPositiveClickListener() != null) positiveBtn.setOnClickListener(onPositiveClick);
+		positiveBtn.setOnClickListener(onPositiveClick);
 		if(dialogData.isShowNegativeBtn() == false) negativeBtn.setVisibility(View.GONE);
 		if(dialogData.getNegativeBtnText() != null) negativeBtn.setText(dialogData.getNegativeBtnText());
 		if(dialogData.getNegativeBtnBg() != null) negativeBtn.setBackgroundResource(dialogData.getNegativeBtnBg());
-		if(dialogData.getOnNegativeClickListener() != null) negativeBtn.setOnClickListener(onNegativeClick);
+		negativeBtn.setOnClickListener(onNegativeClick);
 		
 		if(dialogData.getButtonPadding() != null) setButtonPadding(dialogData.getButtonPadding());
 		if(dialogData.getButtonMargin() != null) setButtonMargin(dialogData.getButtonMargin());
+		if(dialogData.getButtonTextAppearance() != null) setButtonTextAppearance(dialogData.getButtonTextAppearance());
 		if(dialogData.isShowButtons() == false) buttonLayout.setVisibility(View.GONE);
 		
+		
+	}
+	private void setButtonTextAppearance(int resId){
+		positiveBtn.setTextAppearance(context, resId);
+		negativeBtn.setTextAppearance(context, resId);
 	}
 	
 	private void setButtonPadding(int padding){
@@ -182,15 +195,29 @@ public class CommonDialog extends Dialog implements IDialog{
 		negativeBtn.setPadding(padding, padding, padding, padding);
 	}
 	private void setButtonMargin(int margin){
-		// TODO Some errors
-//		MarginLayoutParams mp = new MarginLayoutParams(positiveBtn.getLayoutParams());
-//		mp.setMargins(margin, margin, margin, margin);
-//		LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(mp);
-//		
-//		positiveBtn.setLayoutParams(layoutParams);
-//		negativeBtn.setLayoutParams(layoutParams);
 		positiveLayout.setPadding(margin, margin, margin, margin);
 		negativeLayout.setPadding(margin, margin, margin, margin);
+	}
+	
+	private void setTypeView(){
+		baseView = (ViewGroup) findViewById(R.id.baseView);
+		if(dialogData.getView() != null){
+			baseView.addView(dialogData.getView());
+		}else{
+			if(type != DConstants.DEF_NO_VALUE.NO_INT){
+				int viewResId = 0;
+				switch(type){
+				case DConstants.DEF_DIALOG_TYPE.ALERT_DIALOG:
+					viewResId = R.layout.display_alert;
+					break;
+				case DConstants.DEF_DIALOG_TYPE.LIST_DIALOG:
+					viewResId = R.layout.display_list;
+					break;
+				}
+				View view = LayoutInflater.from(context).inflate(viewResId, null);
+				baseView.addView(view);
+			}
+		}
 	}
 	
 	/**
@@ -229,7 +256,7 @@ public class CommonDialog extends Dialog implements IDialog{
 
 		@Override
 		public void onClick(View v) {
-			dialogData.getOnPositiveClickListener().onClick(v);
+			if(dialogData.getOnPositiveClickListener() != null) dialogData.getOnPositiveClickListener().onClick(v);
 			autoDismiss();
 		}
 
@@ -238,7 +265,7 @@ public class CommonDialog extends Dialog implements IDialog{
 
 		@Override
 		public void onClick(View v) {
-			dialogData.getOnNegativeClickListener().onClick(v);
+			if(dialogData.getOnNegativeClickListener() != null) dialogData.getOnNegativeClickListener().onClick(v);
 			autoDismiss();
 		}
 
@@ -259,6 +286,12 @@ public class CommonDialog extends Dialog implements IDialog{
 	}
 	
 	@Override
+	public void setTitle(int resId) {
+		String title = context.getString(resId);
+		dialogData.setTitle(title);
+	}
+
+	@Override
 	public void setOnPositiveClickListener(android.view.View.OnClickListener onClick){
 		dialogData.setOnPositiveClickListener(onClick);
 	}
@@ -266,6 +299,11 @@ public class CommonDialog extends Dialog implements IDialog{
 	public void setOnNegativeClickListener(android.view.View.OnClickListener onClick){
 		dialogData.setOnNegativeClickListener(onClick);
 	}	
+	
+	@Override
+	public void setView(View view) {
+		dialogData.setView(view);
+	}
 	
 	// List
 	@Override
@@ -280,7 +318,12 @@ public class CommonDialog extends Dialog implements IDialog{
 	// alert
 	@Override
 	public void setContent(String content){
-		dialogData.setContent(content);
+		
+	}
+	
+	@Override
+	public void setContent(int contentRes) {
+		
 	}
 	
 	
@@ -290,26 +333,28 @@ public class CommonDialog extends Dialog implements IDialog{
 	private static int getType(Context context, int style){
 		
 		// 无配置信息时的默认值
-		final int noInt = CDConstants.DEF_NO_VALUE.NO_INT;
+		final int noInt = DConstants.DEF_NO_VALUE.NO_INT;
 		//---------------------读取保存共有属性开始-----------------------
 		
 		TypedArray commonTypedArray = context.obtainStyledAttributes(style, attrs);
 		// 对话框类别
-		int customType = commonTypedArray.getInteger(R.styleable.CommonDialog_type, noInt);
+		type = commonTypedArray.getInteger(R.styleable.CommonDialog_type, noInt);
 		commonTypedArray.recycle();
 		
-		return customType;
+		return type;
 	}
 	
-	public static CommonDialog create(Context context, int style){
+	public static DisplayDialog create(Context context, int style){
 		switch(getType(context, style)){
-		case CDConstants.DEF_DIALOG_TYPE.ALERT_DIALOG:
-			return new CommonAlertDialog(context, style);
-		case CDConstants.DEF_DIALOG_TYPE.LIST_DIALOG:
-			return new CommonListDialog(context, style);
+		case DConstants.DEF_DIALOG_TYPE.ALERT_DIALOG:
+			return new DisplayAlert(context, style);
+		case DConstants.DEF_DIALOG_TYPE.LIST_DIALOG:
+			return new DisplayList(context, style);
 		default:
 			break;
 		}
-		return null;
+		return new DisplayDialog(context);
 	}
+
+	public static int type;
 }

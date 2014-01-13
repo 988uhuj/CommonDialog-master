@@ -19,7 +19,23 @@ public class ListAdapterData {
 	private Float textSize;
 	private Integer itemBg;
 	private Integer appearance;
+	private Integer itemMargin;
+	private Integer itemMarginTopAndBottom;
+	private Integer itemBgHead;
+	private Integer itemBgFoot;
 	
+	public Integer getItemBgHead() {
+		return itemBgHead;
+	}
+	public void setItemBgHead(Integer itemBgHead) {
+		this.itemBgHead = itemBgHead;
+	}
+	public Integer getItemBgFoot() {
+		return itemBgFoot;
+	}
+	public void setItemBgFoot(Integer itemBgFoot) {
+		this.itemBgFoot = itemBgFoot;
+	}
 	public ListAdapterData() {
 		// ÐèÊµÀý»¯
 		list = new ArrayList<Object>();
@@ -65,5 +81,17 @@ public class ListAdapterData {
 	}
 	public void setAppearance(Integer appearance) {
 		this.appearance = appearance;
+	}
+	public Integer getItemMargin() {
+		return itemMargin;
+	}
+	public void setItemMargin(Integer itemMargin) {
+		this.itemMargin = itemMargin;
+	}
+	public Integer getItemMarginTopAndBottom() {
+		return itemMarginTopAndBottom;
+	}
+	public void setItemMarginTopAndBottom(Integer itemMarginTopAndBottom) {
+		this.itemMarginTopAndBottom = itemMarginTopAndBottom;
 	}
 }

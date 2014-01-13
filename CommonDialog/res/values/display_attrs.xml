@@ -8,6 +8,10 @@
         <attr name="itemBackground" format="reference" />
         <attr name="android:textAppearance" />
         <attr name="stringArray" format="reference" />
+        <attr name="itemMargin" format="dimension" />
+        <attr name="itemMarginTopAndBottom" format="dimension" />
+        <attr name="itemBackgroudHead" format="dimension" />
+        <attr name="itemBackgroudFoot" format="dimension" />
     </declare-styleable>
     
     
@@ -45,6 +49,7 @@
        	<attr name="titleTextColor" format="color"/>
        	<attr name="title" format="string"/>
        	<attr name="titleBackground" format="reference"/>
+       	<attr name="titleTextAppearance" format="reference"/>
        	
        	<attr name="positiveButton" format="boolean"/>
        	<attr name="positiveButtonText" format="string"/>
@@ -56,6 +61,7 @@
        	<attr name="onNegativeClick" format="reference"/>
        	<attr name="buttonPadding" format="dimension"/>
        	<attr name="buttonMargin" format="dimension"/>
+       	<attr name="buttonTextAppearance" format="reference" />
        	
     </declare-styleable>
     

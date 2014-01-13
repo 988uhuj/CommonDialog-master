@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-import me.risky.commondialog.CDConstants;
+import me.risky.commondialog.DConstants;
 import me.risky.commondialog.R;
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -113,12 +113,13 @@ public class ListViewAdapter extends BaseAdapter {
 			convertView = layoutInflater.inflate(listAdapterData.getItemView(), null);
 			holder = new ViewHolder();
 			holder.textView = (TextView) convertView.findViewById(R.id.itemBtn);
+			holder.mainLayout = (ViewGroup) convertView.findViewById(R.id.itemMain);
 			convertView.setTag(holder);
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}
 		// 设置样式
-		setStyle(holder.textView);
+		setStyle(holder.textView, holder.mainLayout, position);
 		// 设置数据
 		if(listAdapterData.isMap()){
 			// map 时包含自定义属性
@@ -140,29 +141,29 @@ public class ListViewAdapter extends BaseAdapter {
 	 * @param position
 	 */
 	private void setItemAttr(TextView textview, Map<String, Object> item, int position){
-		textview.setText((String)item.get(CDConstants.DEF_MAP_KEY.BTN_TEXT));
-		if(item.get(CDConstants.DEF_MAP_KEY.BTN_TEXT_SIZE) != null){
-			textview.setTextSize((Float)item.get(CDConstants.DEF_MAP_KEY.BTN_TEXT_SIZE));
+		textview.setText((String)item.get(DConstants.DEF_MAP_KEY.BTN_TEXT));
+		if(item.get(DConstants.DEF_MAP_KEY.BTN_TEXT_SIZE) != null){
+			textview.setTextSize((Float)item.get(DConstants.DEF_MAP_KEY.BTN_TEXT_SIZE));
 		}
-		if(item.get(CDConstants.DEF_MAP_KEY.BTN_TEXT_COLOR) != null){
-			textview.setTextColor((Integer)item.get(CDConstants.DEF_MAP_KEY.BTN_TEXT_COLOR));
+		if(item.get(DConstants.DEF_MAP_KEY.BTN_TEXT_COLOR) != null){
+			textview.setTextColor((Integer)item.get(DConstants.DEF_MAP_KEY.BTN_TEXT_COLOR));
 		}
-		if(item.get(CDConstants.DEF_MAP_KEY.BTN_BG) != null){
-			textview.setBackgroundResource((Integer)item.get(CDConstants.DEF_MAP_KEY.BTN_BG));
+		if(item.get(DConstants.DEF_MAP_KEY.BTN_BG) != null){
+			textview.setBackgroundResource((Integer)item.get(DConstants.DEF_MAP_KEY.BTN_BG));
 		}
-		if(item.get(CDConstants.DEF_MAP_KEY.BTN_PADDING) != null){
-			textview.setPadding(((Integer)item.get(CDConstants.DEF_MAP_KEY.BTN_PADDING)),
-					((Integer)item.get(CDConstants.DEF_MAP_KEY.BTN_PADDING)), 
-					((Integer)item.get(CDConstants.DEF_MAP_KEY.BTN_PADDING)), 
-					((Integer)item.get(CDConstants.DEF_MAP_KEY.BTN_PADDING)));
+		if(item.get(DConstants.DEF_MAP_KEY.BTN_PADDING) != null){
+			textview.setPadding(((Integer)item.get(DConstants.DEF_MAP_KEY.BTN_PADDING)),
+					((Integer)item.get(DConstants.DEF_MAP_KEY.BTN_PADDING)), 
+					((Integer)item.get(DConstants.DEF_MAP_KEY.BTN_PADDING)), 
+					((Integer)item.get(DConstants.DEF_MAP_KEY.BTN_PADDING)));
 		}
-		if(item.get(CDConstants.DEF_MAP_KEY.BTN_DRAWABLE) != null){
-			Drawable d = (Drawable)item.get(CDConstants.DEF_MAP_KEY.BTN_DRAWABLE);
+		if(item.get(DConstants.DEF_MAP_KEY.BTN_DRAWABLE) != null){
+			Drawable d = (Drawable)item.get(DConstants.DEF_MAP_KEY.BTN_DRAWABLE);
 			d.setBounds(0, 0, d.getMinimumWidth(), d.getMinimumHeight());
 			textview.setCompoundDrawables(d, null, null, null);
 		}
-		if(item.get(CDConstants.DEF_MAP_KEY.BTN_DRAWABLE_PADDING) != null){
-			textview.setCompoundDrawablePadding((Integer)item.get(CDConstants.DEF_MAP_KEY.BTN_DRAWABLE_PADDING));
+		if(item.get(DConstants.DEF_MAP_KEY.BTN_DRAWABLE_PADDING) != null){
+			textview.setCompoundDrawablePadding((Integer)item.get(DConstants.DEF_MAP_KEY.BTN_DRAWABLE_PADDING));
 		}
 		
 		
@@ -185,15 +186,31 @@ public class ListViewAdapter extends BaseAdapter {
 	 *  设置配置文件中style样式
 	 * @param textview
 	 */
-	private void setStyle(TextView textview){
+	private void setStyle(TextView textview, ViewGroup mainLayout, int position){
 		if(listAdapterData.getAppearance() != null) textview.setTextAppearance(context, listAdapterData.getAppearance());
 		if(listAdapterData.getTextColor() != null) textview.setTextColor(listAdapterData.getTextColor());
 		if(listAdapterData.getTextSize() != null) textview.setTextSize(listAdapterData.getTextSize());
 		if(listAdapterData.getItemBg() != null) textview.setBackgroundResource(listAdapterData.getItemBg());
+		if(listAdapterData.getItemMargin() != null) setMargin(listAdapterData.getItemMargin(), mainLayout);
+		if(listAdapterData.getItemMarginTopAndBottom() != null) setMarginTopAndButtom(listAdapterData.getItemMarginTopAndBottom(), mainLayout);
+		if(position == 0){
+			if(listAdapterData.getItemBgHead() != null) textview.setBackgroundResource(listAdapterData.getItemBgHead());
+		}
+		if(position == listAdapterData.getList().size() - 1){
+			if(listAdapterData.getItemBgFoot() != null) textview.setBackgroundResource(listAdapterData.getItemBgFoot());
+		}
+		
+	}
+	private void setMargin(int margin, ViewGroup mainLayout){
+		mainLayout.setPadding(margin, margin, margin, margin);
+	}
+	private void setMarginTopAndButtom(int margin, ViewGroup mainLayout){
+		mainLayout.setPadding(0, margin, 0, margin);
 	}
 	
 	
     private class ViewHolder {
+    	ViewGroup mainLayout;
     	TextView textView;
     }
     
@@ -242,5 +259,17 @@ public class ListViewAdapter extends BaseAdapter {
     }
     public void setTextAppearance(int textAppearance){
     	listAdapterData.setAppearance(textAppearance);
+    }
+    public void setItemMargin(int itemMargin){
+    	listAdapterData.setItemMargin(itemMargin);
+    }
+    public void setItemMarginTopAndBottom(int itemMargin){
+    	listAdapterData.setItemMarginTopAndBottom(itemMargin);
+    }
+    public void setItemBgHead(int itemBgHead){
+    	listAdapterData.setItemBgHead(itemBgHead);
+    }
+    public void setItemBgFoot(int itemBgFoot){
+    	listAdapterData.setItemBgFoot(itemBgFoot);
     }
 }

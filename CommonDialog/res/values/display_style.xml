@@ -2,37 +2,45 @@
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
     
    	<!--  list style -->
-    <style name="Theme.CommonListDialog" parent="android:Theme.Dialog">
+    <style name="CommonListDialog" parent="android:Theme.Dialog">
         <item name="android:windowFrame">@null</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上 -->
         <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
         
         <!-- 自定义窗口属性 -->
-        <item name="x">0dp</item>
-        <item name="y">0dp</item>	
         <item name="android:gravity">center</item>
-        <item name="anim">@style/common_dialog_window_anim_top</item>
+        <item name="background">@null</item>
+        <item name="type">list</item>
+        <item name="showButtons">false</item>
+        
+      	<item name="android:textAppearance">@style/itemText</item>
+      	<item name="itemBackground">@drawable/btn_list_item_middle</item>
+      	<item name="itemBackgroudHead">@drawable/btn_list_item_head</item>
+      	<item name="itemBackgroudFoot">@drawable/btn_list_item_foot</item>
+    </style>
+    
+    <!--  list style with some space between items. -->
+    <style name="CommonSpaceListDialog" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上 -->
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+        
+        <!-- 自定义窗口属性 -->
+        <item name="android:gravity">center</item>
         <item name="background">@drawable/login_input</item>
         <item name="type">list</item>
         <item name="showButtons">false</item>
-        <!-- 点击按钮后自动隐藏。默认为true -->
-        <item name="autoDismiss">false</item>
         
-        
-        <!-- 可覆盖Appearance中的属性 -->
-        <!-- 自定义list item属性 -->
-       <!--  <item name="android:textColor">@color/light_gray</item> -->
-       <!--  <item name="android:textSize">18sp</item> -->
-      	<item name="android:textAppearance">@style/TextAppearance.itemText</item>
-      	<item name="itemBackground">@drawable/btn_list_item</item>
+      	<item name="itemMarginTopAndBottom">6dp</item>
     </style>
     
     
     <style name="Widget">
     </style>
     
-    <style name="TextAppearance.itemText" parent="Widget">
+    <style name="itemText" parent="Widget">
         <item name="android:textStyle">bold</item>
        	<item name="android:textSize">16sp</item>
         <item name="android:textColor">@color/light_gray</item>
@@ -40,45 +48,39 @@
     
     
     <!--  alert style -->
-    <style name="Theme.CommonAlertDialog" parent="android:Theme.Dialog">
+    <style name="CommonAlertDialog" parent="android:Theme.Dialog">
         <item name="android:windowFrame">@null</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上 -->
         <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
         
         <!-- 自定义窗口属性 -->
-        <item name="x">0dp</item>
-        <item name="y">0dp</item>	
         <item name="widthFraction">80%</item>	
         <item name="android:gravity">center</item>
-        <item name="anim">@style/common_dialog_window_anim_top</item>
         <item name="background">@drawable/login_input</item>
-        <!-- 点击按钮后自动隐藏。默认为true -->
-        <item name="autoDismiss">false</item>
         <item name="type">alert</item>
-        <!-- 按钮栏显示开关，默认true -->
-        <!-- <item name="showButtons">false</item> -->
         
-        <!-- 可覆盖Appearance中的属性 -->
-        <!-- 自定义list item属性 -->
         <item name="titleTextColor">@color/light_gray</item>
-        <item name="titleTextSize">32sp</item>
-        <item name="title">"hello"</item>
-        <item name="titleBackground">@drawable/btn_list_item</item>
+        <item name="titleTextSize">14sp</item>
+        <item name="title">提示</item>
         
-        <item name="positiveButton">true</item> 
-        <item name="positiveButtonText">"confirm"</item>
+        <item name="positiveButtonText">确定</item>
         <item name="positiveButtonBg">@drawable/btn_list_item</item>
-        <item name="negativeButton">true</item>
-        <item name="negativeButtonText">"cancel"</item>
+        <item name="negativeButtonText">取消</item>
         <item name="negativeButtonBg">@drawable/btn_list_item</item>
-        <item name="buttonPadding">0dp</item>
         <item name="buttonMargin">2dp</item>
         
       	<item name="contentTextColor">@color/transparentgray</item>
-        <item name="contentTextSize">16sp</item>
+        <item name="contentTextSize">12sp</item>
         <item name="content">"This is a content"</item>
-        <item name="contentBackground">@drawable/btn_list_item</item>
+    </style>
+    
+    <!--  empty style -->
+    <style name="CommonEmptyDialog" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上 -->
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
     </style>
     
     

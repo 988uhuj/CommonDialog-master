@@ -1,9 +1,10 @@
 package me.risky.commondialog;
 
+import android.view.View;
 import android.view.View.OnClickListener;
 
 
-public class DialogData {
+public class DisplayData {
 	private Integer width;
 	private Integer height;
 	private Float widthFraction;
@@ -15,11 +16,14 @@ public class DialogData {
 	private Integer bg;
 	private Integer anim;
 	private Integer padding;
+	private boolean autoDismiss; 
+	private boolean showButtons;
 	
 	private Float titleTextSize;
 	private Integer titleTextColor;
 	private String title;
 	private Integer titleBackground;
+	private Integer titleTextAppearance;
 	
 	private boolean showPositiveBtn;
 	private String positiveBtnText;
@@ -31,10 +35,11 @@ public class DialogData {
 	private Integer negativeBtnBg;
 	private Integer buttonPadding;	
 	private Integer buttonMargin;
-	private boolean autoDismiss; 
-	private boolean showButtons;
+	private Integer buttonTextAppearance;
+	
 	
 	private Integer type;
+	private View view;
 	
 	
 	//------List--------
@@ -43,6 +48,10 @@ public class DialogData {
 	private String[] listMenus;
 	private Integer listTextAppearance;
 	private Float listTextSize;
+	private Integer listItemMagin;
+	private Integer listItemMaginTopAndBottom;
+	private Integer listItemBgHead;
+	private Integer listItemBgFoot;
 	
 	//------Alert------
 	
@@ -286,5 +295,47 @@ public class DialogData {
 	}
 	public void setAlertContentTextApperance(Integer alertContentTextApperance) {
 		this.alertContentTextApperance = alertContentTextApperance;
+	}
+	public Integer getTitleTextAppearance() {
+		return titleTextAppearance;
+	}
+	public void setTitleTextAppearance(Integer titleTextAppearance) {
+		this.titleTextAppearance = titleTextAppearance;
+	}
+	public Integer getButtonTextAppearance() {
+		return buttonTextAppearance;
+	}
+	public void setButtonTextAppearance(Integer buttonTextAppearance) {
+		this.buttonTextAppearance = buttonTextAppearance;
+	}
+	public Integer getListItemMagin() {
+		return listItemMagin;
+	}
+	public void setListItemMagin(Integer listItemMagin) {
+		this.listItemMagin = listItemMagin;
+	}
+	public Integer getListItemMaginTopAndBottom() {
+		return listItemMaginTopAndBottom;
+	}
+	public void setListItemMaginTopAndBottom(Integer listItemMaginTopAndBottom) {
+		this.listItemMaginTopAndBottom = listItemMaginTopAndBottom;
+	}
+	public View getView() {
+		return view;
+	}
+	public void setView(View view) {
+		this.view = view;
+	}
+	public Integer getListItemBgHead() {
+		return listItemBgHead;
+	}
+	public void setListItemBgHead(Integer listItemBgHead) {
+		this.listItemBgHead = listItemBgHead;
+	}
+	public Integer getListItemBgFoot() {
+		return listItemBgFoot;
+	}
+	public void setListItemBgFoot(Integer listItemBgFoot) {
+		this.listItemBgFoot = listItemBgFoot;
 	}
 }

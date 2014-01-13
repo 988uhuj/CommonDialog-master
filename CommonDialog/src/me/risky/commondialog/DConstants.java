@@ -1,9 +1,11 @@
 package me.risky.commondialog;
 
-public class CDConstants {
+public class DConstants {
 	
-	public final static int DEFAULT_THEME_LIST = R.style.Theme_CommonListDialog;
-	public final static int DEFAULT_THEME_ALERT = R.style.Theme_CommonAlertDialog;
+	public final static int DEFAULT_THEME_LIST = R.style.CommonListDialog;
+	public final static int DEFAULT_THEME_LIST_SPACE = R.style.CommonSpaceListDialog;
+	public final static int DEFAULT_THEME_ALERT = R.style.CommonAlertDialog;
+	public final static int DEFAULT_EMTPY = R.style.CommonEmptyDialog;
 	
 	/**
 	 * 定义Map数据源的key值
