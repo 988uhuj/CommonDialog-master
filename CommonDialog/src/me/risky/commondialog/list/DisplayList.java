@@ -47,11 +47,13 @@ public class DisplayList extends DisplayDialog{
 		int customTextColor = typedArray.getColor(R.styleable.ListDialog_android_textColor, noInt);
 		int customItemBg = typedArray.getResourceId(R.styleable.ListDialog_itemBackground, noInt);
 		int customMenus = typedArray.getResourceId(R.styleable.ListDialog_stringArray, noInt);
-		int customTextAppearance = typedArray.getResourceId(R.styleable.ListDialog_android_textAppearance, noInt);
+		int customTextAppearance = typedArray.getResourceId(R.styleable.ListDialog_itemTextAppearance, noInt);
 		int customItemMargin = (int) typedArray.getDimension(R.styleable.ListDialog_itemMargin, noInt);
 		int customItemMarginTB = (int) typedArray.getDimension(R.styleable.ListDialog_itemMarginTopAndBottom, noInt);
-		int customItemBgHead = (int) typedArray.getResourceId(R.styleable.ListDialog_itemBackgroudHead, noInt);
-		int customItemBgFoot = (int) typedArray.getResourceId(R.styleable.ListDialog_itemBackgroudFoot, noInt);
+		int customItemBgHead = (int) typedArray.getResourceId(R.styleable.ListDialog_itemBackgroundHead, noInt);
+		int customItemBgFoot = (int) typedArray.getResourceId(R.styleable.ListDialog_itemBackgroundFoot, noInt);
+		int customItemWidth = (int) typedArray.getDimension(R.styleable.ListDialog_itemWidth, noInt);
+		int customItemHeight = (int) typedArray.getDimension(R.styleable.ListDialog_itemHeight, noInt);
 		typedArray.recycle();
 		
 		// 保存配置数据
@@ -63,6 +65,8 @@ public class DisplayList extends DisplayDialog{
 		if(customItemMarginTB != noInt) dialogData.setListItemMaginTopAndBottom(customItemMarginTB);
 		if(customItemBgHead != noInt) dialogData.setListItemBgHead(customItemBgHead);
 		if(customItemBgFoot != noInt) dialogData.setListItemBgFoot(customItemBgFoot);
+		if(customItemWidth != noInt) dialogData.setListItemWidth(customItemWidth);
+		if(customItemHeight != noInt) dialogData.setListItemHeight(customItemHeight);
 		dialogData.setListTextAppearance(customTextAppearance);
 		
 		// --------------通过保存的属性设置相应控件的样式----------------
@@ -75,6 +79,8 @@ public class DisplayList extends DisplayDialog{
 		if(dialogData.getListItemMaginTopAndBottom() != null) listViewAdapter.setItemMarginTopAndBottom(dialogData.getListItemMaginTopAndBottom());
 		if(dialogData.getListItemBgHead() != null) listViewAdapter.setItemBgHead(dialogData.getListItemBgHead());
 		if(dialogData.getListItemBgFoot() != null) listViewAdapter.setItemBgFoot(dialogData.getListItemBgFoot());
+		if(dialogData.getListItemWidth() != null) listViewAdapter.setItemWidth(dialogData.getListItemWidth());
+		if(dialogData.getListItemHeight() != null) listViewAdapter.setItemHeight(dialogData.getListItemHeight());
 	}
 	
 	@Override

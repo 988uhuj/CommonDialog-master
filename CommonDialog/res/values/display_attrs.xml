@@ -3,65 +3,96 @@
     
     <declare-styleable name="ListDialog">
         <!-- Style of the list dialog. -->
+        <!-- listItem里的text属性 -->
         <attr name="android:textSize" />
        	<attr name="android:textColor"/>
-        <attr name="itemBackground" format="reference" />
-        <attr name="android:textAppearance" />
+        <!-- listItem里的text外观，可被textSize和textColor覆盖 -->
+        <attr name="itemTextAppearance" format="reference" />
+        <!-- list数据源，非必须 -->
         <attr name="stringArray" format="reference" />
+        <!-- listItem四周的margin -->
         <attr name="itemMargin" format="dimension" />
+        <!-- listItem上下的margin -->
         <attr name="itemMarginTopAndBottom" format="dimension" />
-        <attr name="itemBackgroudHead" format="dimension" />
-        <attr name="itemBackgroudFoot" format="dimension" />
+        <!-- listItem里的text背景 -->
+        <attr name="itemBackground" format="reference" />
+        <!-- listItem第一个和最后一个背景，可覆盖itemBackground -->
+        <attr name="itemBackgroundHead" format="dimension" />
+        <attr name="itemBackgroundFoot" format="dimension" />
+        <!-- listItem宽度和高度 -->
+        <attr name="itemWidth" format="dimension"/>
+       	<attr name="itemHeight" format="dimension"/>
     </declare-styleable>
     
     
     <declare-styleable name="AlertDialog">
     	<!-- Style of the alert dialog. -->
+    	
         <attr name="contentTextSize" format="dimension"/>
        	<attr name="contentTextColor" format="color"/>
+       	<!-- content里的text外观，可被textSize和textColor覆盖 -->
+       	<attr name="contentTextAppearance" format="reference"/>
+       	<!-- content显示内容 -->
        	<attr name="content" format="string"/>
        	<attr name="contentBackground" format="reference"/>
-       	<attr name="contentTextAppearance" format="reference"/>
+       	<attr name="contentWidth" format="dimension"/>
+       	<attr name="contentHeight" format="dimension"/>
     </declare-styleable>
 
     
     <!-- 对话框共有的属性 -->
     <declare-styleable name="CommonDialog">
     	<!-- Style of the base dialog. -->
+    	<!-- dialog显示位置的偏移量,默认为0 -->
         <attr name="x" format="dimension" />
         <attr name="y" format="dimension" />
+        <!-- dialog宽度和高度 -->
         <attr name="width" format="dimension" />
         <attr name="height" format="dimension" />
+        <!-- dialog宽度和高度百分比，优先级大于width和height -->
         <attr name="widthFraction" format="fraction" />
         <attr name="heightFraction" format="fraction" />
+        <!-- dialog位置属性 -->
         <attr name="android:gravity" />
+        <!-- dialog进出动画 -->
         <attr name="anim" format="reference" />
+        <!-- dialog背景-->
         <attr name="background" format="reference" />
-        
+        <!-- dialog点击按钮后自动隐藏，默认为true -->
         <attr name="autoDismiss" format="boolean" />
+        <!-- 是否显示dialog底部按钮栏 默认true-->
         <attr name="showButtons" format="boolean" />
+        <!-- dialog类型，非自定义view的时候需指定 -->
         <attr name="type">
             <enum name="list" value="1" />
             <enum name="alert" value="2" />
         </attr>
         
+       	<!-- title属性 -->
         <attr name="titleTextSize" format="dimension"/>
        	<attr name="titleTextColor" format="color"/>
        	<attr name="title" format="string"/>
        	<attr name="titleBackground" format="reference"/>
        	<attr name="titleTextAppearance" format="reference"/>
+       	<attr name="titleWidth" format="dimension"/>
+       	<attr name="titleHeight" format="dimension"/>
+       	<attr name="titlePadding" format="dimension"/>
        	
+       	<!-- 确定取消按钮的属性 -->
        	<attr name="positiveButton" format="boolean"/>
        	<attr name="positiveButtonText" format="string"/>
        	<attr name="positiveButtonBg" format="reference"/>
-       	<attr name="onPositiveClick" format="reference"/>
        	<attr name="negativeButton" format="boolean"/>
        	<attr name="negativeButtonText" format="string"/>
        	<attr name="negativeButtonBg" format="reference"/>
-       	<attr name="onNegativeClick" format="reference"/>
+       	<!-- 每个按钮的padding -->
        	<attr name="buttonPadding" format="dimension"/>
+       	<!-- 每个按钮的margin -->
        	<attr name="buttonMargin" format="dimension"/>
        	<attr name="buttonTextAppearance" format="reference" />
+       	<!-- 按钮栏的宽度和高度 -->
+       	<attr name="buttonWidth" format="dimension"/>
+       	<attr name="buttonHeight" format="dimension"/>
        	
     </declare-styleable>
     

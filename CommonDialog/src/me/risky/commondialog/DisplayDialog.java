@@ -83,10 +83,13 @@ public class DisplayDialog extends Dialog implements IDisplay{
 		
 		// Title
 		int customTitleTextColor = commonTypedArray.getColor(R.styleable.CommonDialog_titleTextColor, noInt); 
-		float customTitleTextSize = commonTypedArray.getDimension(R.styleable.CommonDialog_titleTextSize, noInt); 
+		float customTitleTextSize = commonTypedArray.getDimension(R.styleable.CommonDialog_titleTextSize, noFloat); 
 		String customTitle = commonTypedArray.getString(R.styleable.CommonDialog_title);
 		int customTitleBg = commonTypedArray.getResourceId(R.styleable.CommonDialog_titleBackground, noInt);
 		int customTitleTextAppearance = commonTypedArray.getResourceId(R.styleable.CommonDialog_titleTextAppearance,  noInt);
+		int customTitleWidth = (int) commonTypedArray.getDimension(R.styleable.CommonDialog_titleWidth, noInt);
+		int customTitleHeight = (int) commonTypedArray.getDimension(R.styleable.CommonDialog_titleHeight, noInt);
+		int customTitlePadding = (int) commonTypedArray.getDimension(R.styleable.CommonDialog_titlePadding, noInt);
 		
 		// Button
 		boolean customIsShowPositiveBtn = commonTypedArray.getBoolean(R.styleable.CommonDialog_positiveButton, true);
@@ -99,8 +102,11 @@ public class DisplayDialog extends Dialog implements IDisplay{
 		int customButtonPadding = (int)commonTypedArray.getDimension(R.styleable.CommonDialog_buttonPadding, noFloat);
 		int customButtonMargin = (int)commonTypedArray.getDimension(R.styleable.CommonDialog_buttonMargin, noFloat);
 		int customButtonTextAppearance = commonTypedArray.getResourceId(R.styleable.CommonDialog_buttonTextAppearance, noInt);
+		int customButtonWidth = (int) commonTypedArray.getDimension(R.styleable.CommonDialog_buttonWidth, noInt);
+		int customButtonHeight = (int) commonTypedArray.getDimension(R.styleable.CommonDialog_buttonHeight, noInt);
 		commonTypedArray.recycle();
 		
+		Log.d("display", customButtonHeight + "");
 		
 		// ±£¥Ê≈‰÷√ ˝æ› 
 		if(customType != noInt) dialogData.setType(customType);
@@ -119,10 +125,13 @@ public class DisplayDialog extends Dialog implements IDisplay{
 		
 		// Save title
 		if(customTitleTextColor != noFloat) dialogData.setTitleTextColor(customTitleTextColor);
-		if(customTitleTextSize != noInt) dialogData.setTitleTextSize(customTitleTextSize);
+		if(customTitleTextSize != noFloat) dialogData.setTitleTextSize(customTitleTextSize);
 		if(customTitle != null) dialogData.setTitle(customTitle);
 		if(customTitleBg != noInt) dialogData.setTitleBackground(customTitleBg);
 		if(customTitleTextAppearance != noInt) dialogData.setTitleTextAppearance(customTitleTextAppearance);
+		if(customTitleWidth != noInt) dialogData.setTitleWidth(customTitleWidth);
+		if(customTitleHeight != noInt) dialogData.setTitleHeight(customTitleHeight);
+		if(customTitlePadding != noInt) dialogData.setTitlePadding(customTitlePadding);
 		
 		// Save button
 		dialogData.setShowPositiveBtn(customIsShowPositiveBtn);
@@ -134,6 +143,8 @@ public class DisplayDialog extends Dialog implements IDisplay{
 		if(customButtonPadding != noFloat) dialogData.setButtonPadding(customButtonPadding);
 		if(customButtonMargin != noFloat) dialogData.setButtonMargin(customButtonMargin);	
 		if(customButtonTextAppearance != noInt) dialogData.setButtonTextAppearance(customButtonTextAppearance);
+		if(customButtonWidth != noInt) dialogData.setButtonWidth(customButtonWidth);
+		if(customButtonHeight != noInt) dialogData.setButtonHeight(customButtonHeight);
 	}
 	
 	
@@ -168,12 +179,15 @@ public class DisplayDialog extends Dialog implements IDisplay{
 		if(dialogData.getTitleTextColor() != null) titleTV.setTextColor(dialogData.getTitleTextColor());
 		if(dialogData.getTitleTextSize() != null) titleTV.setTextSize(dialogData.getTitleTextSize());
 		if(dialogData.getTitleBackground() != null) titleTV.setBackgroundResource(dialogData.getTitleBackground());
+		if(dialogData.getTitleWidth() != null) titleTV.setWidth(dialogData.getTitleWidth());
+		if(dialogData.getTitleHeight() != null) titleTV.setHeight(dialogData.getTitleHeight());
+		if(dialogData.getTitlePadding() != null) setTitlePadding(dialogData.getTitlePadding());
 		
-		if(dialogData.isShowPositiveBtn() == false) positiveBtn.setVisibility(View.GONE);
+		if(dialogData.isShowPositiveBtn() == false) positiveLayout.setVisibility(View.GONE);
 		if(dialogData.getPositiveBtnText() != null) positiveBtn.setText(dialogData.getPositiveBtnText());
 		if(dialogData.getPositiveBtnBg() != null) positiveBtn.setBackgroundResource(dialogData.getPositiveBtnBg());
 		positiveBtn.setOnClickListener(onPositiveClick);
-		if(dialogData.isShowNegativeBtn() == false) negativeBtn.setVisibility(View.GONE);
+		if(dialogData.isShowNegativeBtn() == false) negativeLayout.setVisibility(View.GONE);
 		if(dialogData.getNegativeBtnText() != null) negativeBtn.setText(dialogData.getNegativeBtnText());
 		if(dialogData.getNegativeBtnBg() != null) negativeBtn.setBackgroundResource(dialogData.getNegativeBtnBg());
 		negativeBtn.setOnClickListener(onNegativeClick);
@@ -182,8 +196,27 @@ public class DisplayDialog extends Dialog implements IDisplay{
 		if(dialogData.getButtonMargin() != null) setButtonMargin(dialogData.getButtonMargin());
 		if(dialogData.getButtonTextAppearance() != null) setButtonTextAppearance(dialogData.getButtonTextAppearance());
 		if(dialogData.isShowButtons() == false) buttonLayout.setVisibility(View.GONE);
-		
-		
+		setButtonParams();
+	}
+	private void setTitlePadding(int padding){
+		Log.d("DisplayTitle", padding + "");
+		titleTV.setPadding(padding, padding, padding, padding);
+	}
+	private void setButtonParams(){
+//		int width = LayoutParams.MATCH_PARENT;
+//		int height = LayoutParams.WRAP_CONTENT;
+//		if(dialogData.getWidth() != null) width = dialogData.getWidth();
+//		if(dialogData.getHeight() != null) height = dialogData.getHeight();
+//		LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(width, height);
+//		buttonLayout.setLayoutParams(layoutParams);
+		if(dialogData.getButtonWidth() != null){
+			positiveBtn.setWidth(dialogData.getButtonWidth());
+			negativeBtn.setWidth(dialogData.getButtonWidth());
+		}
+		if(dialogData.getButtonHeight() != null){
+			positiveBtn.setHeight(dialogData.getButtonHeight());
+			negativeBtn.setHeight(dialogData.getButtonHeight());
+		}
 	}
 	private void setButtonTextAppearance(int resId){
 		positiveBtn.setTextAppearance(context, resId);

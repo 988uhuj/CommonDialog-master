@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 /**
  * 
@@ -112,23 +113,23 @@ public class ListViewAdapter extends BaseAdapter {
 		if (null == convertView) {
 			convertView = layoutInflater.inflate(listAdapterData.getItemView(), null);
 			holder = new ViewHolder();
-			holder.textView = (TextView) convertView.findViewById(R.id.itemBtn);
+			holder.button = (Button) convertView.findViewById(R.id.itemBtn);
 			holder.mainLayout = (ViewGroup) convertView.findViewById(R.id.itemMain);
 			convertView.setTag(holder);
 		} else {
 			holder = (ViewHolder) convertView.getTag();
 		}
 		// 设置样式
-		setStyle(holder.textView, holder.mainLayout, position);
+		setStyle(holder.button, holder.mainLayout, position);
 		// 设置数据
 		if(listAdapterData.isMap()){
 			// map 时包含自定义属性
 			Map<String, Object> item = (Map<String, Object>)listAdapterData.getList().get(position); // 获取当前项数据
-			setItemAttr(holder.textView, item, position);
+			setItemAttr(holder.button, item, position);
 		}else{
 			// String 只显示文本
 			String item = (String) listAdapterData.getList().get(position);
-			setItemAttr(holder.textView, item, position);
+			setItemAttr(holder.button, item, position);
 		}
 		
 		return convertView;
@@ -184,22 +185,26 @@ public class ListViewAdapter extends BaseAdapter {
 	
 	/**
 	 *  设置配置文件中style样式
-	 * @param textview
+	 * @param button
 	 */
-	private void setStyle(TextView textview, ViewGroup mainLayout, int position){
-		if(listAdapterData.getAppearance() != null) textview.setTextAppearance(context, listAdapterData.getAppearance());
-		if(listAdapterData.getTextColor() != null) textview.setTextColor(listAdapterData.getTextColor());
-		if(listAdapterData.getTextSize() != null) textview.setTextSize(listAdapterData.getTextSize());
-		if(listAdapterData.getItemBg() != null) textview.setBackgroundResource(listAdapterData.getItemBg());
+	private void setStyle(Button button, ViewGroup mainLayout, int position){
+		if(listAdapterData.getAppearance() != null) button.setTextAppearance(context, listAdapterData.getAppearance());
+		if(listAdapterData.getTextColor() != null) button.setTextColor(listAdapterData.getTextColor());
+		if(listAdapterData.getTextSize() != null) button.setTextSize(listAdapterData.getTextSize());
+		if(listAdapterData.getItemBg() != null) button.setBackgroundResource(listAdapterData.getItemBg());
 		if(listAdapterData.getItemMargin() != null) setMargin(listAdapterData.getItemMargin(), mainLayout);
 		if(listAdapterData.getItemMarginTopAndBottom() != null) setMarginTopAndButtom(listAdapterData.getItemMarginTopAndBottom(), mainLayout);
 		if(position == 0){
-			if(listAdapterData.getItemBgHead() != null) textview.setBackgroundResource(listAdapterData.getItemBgHead());
+			if(listAdapterData.getItemBgHead() != null) button.setBackgroundResource(listAdapterData.getItemBgHead());
 		}
 		if(position == listAdapterData.getList().size() - 1){
-			if(listAdapterData.getItemBgFoot() != null) textview.setBackgroundResource(listAdapterData.getItemBgFoot());
+			if(listAdapterData.getItemBgFoot() != null) button.setBackgroundResource(listAdapterData.getItemBgFoot());
 		}
-		
+		if(listAdapterData.getItemWidth() != null) button.setWidth(listAdapterData.getItemWidth());
+		if(listAdapterData.getItemHeight() != null){
+			Log.d("adapter", "height" + listAdapterData.getItemHeight());
+			button.setHeight(listAdapterData.getItemHeight());
+		}
 	}
 	private void setMargin(int margin, ViewGroup mainLayout){
 		mainLayout.setPadding(margin, margin, margin, margin);
@@ -211,7 +216,7 @@ public class ListViewAdapter extends BaseAdapter {
 	
     private class ViewHolder {
     	ViewGroup mainLayout;
-    	TextView textView;
+    	Button button;
     }
     
     /**
@@ -271,5 +276,11 @@ public class ListViewAdapter extends BaseAdapter {
     }
     public void setItemBgFoot(int itemBgFoot){
     	listAdapterData.setItemBgFoot(itemBgFoot);
+    }
+    public void setItemWidth(int itemWidth){
+    	listAdapterData.setItemWidth(itemWidth);
+    }
+    public void setItemHeight(int itemHeight){
+    	listAdapterData.setItemHeight(itemHeight);
     }
 }

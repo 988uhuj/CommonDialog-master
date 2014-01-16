@@ -24,6 +24,9 @@ public class DisplayData {
 	private String title;
 	private Integer titleBackground;
 	private Integer titleTextAppearance;
+	private Integer titleWidth;
+	private Integer titleHeight;
+	private Integer titlePadding;
 	
 	private boolean showPositiveBtn;
 	private String positiveBtnText;
@@ -36,6 +39,8 @@ public class DisplayData {
 	private Integer buttonPadding;	
 	private Integer buttonMargin;
 	private Integer buttonTextAppearance;
+	private Integer buttonWidth;
+	private Integer buttonHeight;
 	
 	
 	private Integer type;
@@ -52,6 +57,8 @@ public class DisplayData {
 	private Integer listItemMaginTopAndBottom;
 	private Integer listItemBgHead;
 	private Integer listItemBgFoot;
+	private Integer listItemWidth;
+	private Integer listItemHeight;
 	
 	//------Alert------
 	
@@ -60,6 +67,8 @@ public class DisplayData {
 	private String content;
 	private Integer contentBackground;
 	private Integer alertContentTextApperance;
+	private Integer contentWidth;
+	private Integer contentHeight;
 		
 	
 	
@@ -337,5 +346,59 @@ public class DisplayData {
 	}
 	public void setListItemBgFoot(Integer listItemBgFoot) {
 		this.listItemBgFoot = listItemBgFoot;
+	}
+	public Integer getTitleWidth() {
+		return titleWidth;
+	}
+	public void setTitleWidth(Integer titleWidth) {
+		this.titleWidth = titleWidth;
+	}
+	public Integer getTitleHeight() {
+		return titleHeight;
+	}
+	public void setTitleHeight(Integer titleHeight) {
+		this.titleHeight = titleHeight;
+	}
+	public Integer getButtonWidth() {
+		return buttonWidth;
+	}
+	public void setButtonWidth(Integer buttonWidth) {
+		this.buttonWidth = buttonWidth;
+	}
+	public Integer getButtonHeight() {
+		return buttonHeight;
+	}
+	public void setButtonHeight(Integer buttonHeight) {
+		this.buttonHeight = buttonHeight;
+	}
+	public Integer getListItemWidth() {
+		return listItemWidth;
+	}
+	public void setListItemWidth(Integer listItemWidth) {
+		this.listItemWidth = listItemWidth;
+	}
+	public Integer getListItemHeight() {
+		return listItemHeight;
+	}
+	public void setListItemHeight(Integer listItemHeight) {
+		this.listItemHeight = listItemHeight;
+	}
+	public Integer getContentWidth() {
+		return contentWidth;
+	}
+	public void setContentWidth(Integer contentWidth) {
+		this.contentWidth = contentWidth;
+	}
+	public Integer getContentHeight() {
+		return contentHeight;
+	}
+	public void setContentHeight(Integer contentHeight) {
+		this.contentHeight = contentHeight;
+	}
+	public Integer getTitlePadding() {
+		return titlePadding;
+	}
+	public void setTitlePadding(Integer titlePadding) {
+		this.titlePadding = titlePadding;
 	}
 }

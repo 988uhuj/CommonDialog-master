@@ -1,39 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
     
-   	<!--  list style -->
-    <style name="CommonListDialog" parent="android:Theme.Dialog">
+    <!--  list style parent, 自定义Dialog可继承此style-->
+    <style name="BaseListDialog" parent="android:Theme.Dialog">
         <item name="android:windowFrame">@null</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上 -->
         <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
         
-        <!-- 自定义窗口属性 -->
         <item name="android:gravity">center</item>
         <item name="background">@null</item>
         <item name="type">list</item>
         <item name="showButtons">false</item>
-        
-      	<item name="android:textAppearance">@style/itemText</item>
-      	<item name="itemBackground">@drawable/btn_list_item_middle</item>
-      	<item name="itemBackgroudHead">@drawable/btn_list_item_head</item>
-      	<item name="itemBackgroudFoot">@drawable/btn_list_item_foot</item>
     </style>
     
-    <!--  list style with some space between items. -->
-    <style name="CommonSpaceListDialog" parent="android:Theme.Dialog">
+    <!-- alert style parent 自定义Dialog可继承此Dialog-->
+    <style name="BaseAlertDialog" parent="android:Theme.Dialog">
         <item name="android:windowFrame">@null</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上 -->
         <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
         
         <!-- 自定义窗口属性 -->
+        <item name="widthFraction">80%</item>	
         <item name="android:gravity">center</item>
-        <item name="background">@drawable/login_input</item>
-        <item name="type">list</item>
-        <item name="showButtons">false</item>
+        <item name="type">alert</item>
         
+        <item name="title">提示</item>
+        <item name="titlePadding">38dp</item>
+        <item name="titleTextColor">@color/light_gray</item>
+        <item name="titleTextSize">14sp</item>
+        
+        <item name="positiveButtonText">确定</item>
+        <item name="negativeButtonText">取消</item>
+        <item name="buttonMargin">2dp</item>
+    </style>
+    
+   	<!--  empty style , 自定义Dialog 可继承此Style，view为空-->
+    <style name="BaseEmptyDialog" parent="android:Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上 -->
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
+    </style>
+    
+    
+    
+    
+    
+    
+    
+   	<!-- 默认  list style -->
+    <style name="CommonListDialog" parent="BaseListDialog">
+      	<item name="itemTextAppearance">@style/itemText</item>
+      	<item name="itemBackground">@drawable/btn_list_item_middle</item>
+      	<item name="itemBackgroundHead">@drawable/btn_list_item_head</item>
+      	<item name="itemBackgroundFoot">@drawable/btn_list_item_foot</item>
+    </style>
+    
+    <!-- 默认  list style with some space between items. -->
+    <style name="CommonSpaceListDialog" parent="BaseListDialog">
+        <item name="background">@drawable/login_input</item>
+        <item name="itemBackground">@drawable/btn_list_item</item>
       	<item name="itemMarginTopAndBottom">6dp</item>
+    </style>
+    
+    <!-- 默认  alert style -->
+    <style name="CommonAlertDialog" parent="BaseAlertDialog">
+        <item name="background">@drawable/login_input</item>
+        
+        <item name="positiveButtonBg">@drawable/btn_list_item</item>
+        <item name="negativeButtonBg">@drawable/btn_list_item</item>
+        
+      	<item name="contentTextColor">@color/transparentgray</item>
+        <item name="contentTextSize">12sp</item>
+        <item name="content">"This is a content"</item>
     </style>
     
     
@@ -47,41 +88,14 @@
     </style>
     
     
-    <!--  alert style -->
-    <style name="CommonAlertDialog" parent="android:Theme.Dialog">
-        <item name="android:windowFrame">@null</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上 -->
-        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
-        
-        <!-- 自定义窗口属性 -->
-        <item name="widthFraction">80%</item>	
-        <item name="android:gravity">center</item>
-        <item name="background">@drawable/login_input</item>
-        <item name="type">alert</item>
-        
-        <item name="titleTextColor">@color/light_gray</item>
-        <item name="titleTextSize">14sp</item>
-        <item name="title">提示</item>
-        
-        <item name="positiveButtonText">确定</item>
-        <item name="positiveButtonBg">@drawable/btn_list_item</item>
-        <item name="negativeButtonText">取消</item>
-        <item name="negativeButtonBg">@drawable/btn_list_item</item>
-        <item name="buttonMargin">2dp</item>
-        
-      	<item name="contentTextColor">@color/transparentgray</item>
-        <item name="contentTextSize">12sp</item>
-        <item name="content">"This is a content"</item>
-    </style>
     
-    <!--  empty style -->
-    <style name="CommonEmptyDialog" parent="android:Theme.Dialog">
-        <item name="android:windowFrame">@null</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowIsFloating">true</item><!--是否浮现在activity之上 -->
-        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明-->
-    </style>
+    
+    
+    
+  
+    
+    
+    
     
     
     

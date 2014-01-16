@@ -36,6 +36,8 @@ public class DisplayAlert extends DisplayDialog{
 		String customContent = typedArray.getString(R.styleable.AlertDialog_content); 
 		int customContentBg = typedArray.getResourceId(R.styleable.AlertDialog_contentBackground, noInt);
 		int customTextAppearance = typedArray.getResourceId(R.styleable.AlertDialog_contentTextAppearance, noInt);
+		int customWidth = (int) typedArray.getDimension(R.styleable.AlertDialog_contentWidth, noInt);
+		int customHeight =  (int) typedArray.getDimension(R.styleable.AlertDialog_contentHeight, noInt);
 		typedArray.recycle();
 		
 		// ----------------- ±£¥Ê≈‰÷√ ˝æ› ---------------------
@@ -46,7 +48,8 @@ public class DisplayAlert extends DisplayDialog{
 		if(customContent != null) dialogData.setContent(customContent);
 		if(customContentBg != noInt) dialogData.setContentBackground(customContentBg);
 		if(customTextAppearance != noInt) dialogData.setAlertContentTextApperance(customTextAppearance);
-		
+		if(customWidth != noInt) dialogData.setContentWidth(customWidth);
+		if(customHeight != noInt) dialogData.setContentHeight(customHeight);
 	}
 	
 
@@ -65,6 +68,8 @@ public class DisplayAlert extends DisplayDialog{
 		if(dialogData.getContentTextColor() != null) contentTV.setTextColor(dialogData.getContentTextColor());
 		if(dialogData.getContentTextSize() != null) contentTV.setTextSize(dialogData.getContentTextSize());
 		if(dialogData.getContentBackground() != null) contentTV.setBackgroundResource(dialogData.getContentBackground());
+		if(dialogData.getContentWidth() != null) contentTV.setWidth(dialogData.getContentWidth());
+		if(dialogData.getContentHeight() != null) contentTV.setHeight(dialogData.getContentHeight());
 	}
 
 	@Override

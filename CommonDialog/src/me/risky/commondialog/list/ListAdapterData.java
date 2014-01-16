@@ -23,7 +23,21 @@ public class ListAdapterData {
 	private Integer itemMarginTopAndBottom;
 	private Integer itemBgHead;
 	private Integer itemBgFoot;
+	private Integer itemWidth;
+	private Integer itemHeight;
 	
+	public Integer getItemWidth() {
+		return itemWidth;
+	}
+	public void setItemWidth(Integer itemWidth) {
+		this.itemWidth = itemWidth;
+	}
+	public Integer getItemHeight() {
+		return itemHeight;
+	}
+	public void setItemHeight(Integer itemHeight) {
+		this.itemHeight = itemHeight;
+	}
 	public Integer getItemBgHead() {
 		return itemBgHead;
 	}

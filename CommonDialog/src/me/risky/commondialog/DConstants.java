@@ -5,7 +5,7 @@ public class DConstants {
 	public final static int DEFAULT_THEME_LIST = R.style.CommonListDialog;
 	public final static int DEFAULT_THEME_LIST_SPACE = R.style.CommonSpaceListDialog;
 	public final static int DEFAULT_THEME_ALERT = R.style.CommonAlertDialog;
-	public final static int DEFAULT_EMTPY = R.style.CommonEmptyDialog;
+	public final static int DEFAULT_EMTPY = R.style.BaseEmptyDialog;
 	
 	/**
 	 * 定义Map数据源的key值
