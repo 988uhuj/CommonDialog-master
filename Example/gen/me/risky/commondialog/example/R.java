@@ -21,24 +21,28 @@ public final class R {
     }
     public static final class array {
         public static final int city=0x7f0a0000;
+        public static final int test=0x7f0a0001;
     }
     public static final class attr {
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+        /**  dialog进出动画 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int anim=0x7f010011;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+        public static final int anim=0x7f010016;
+        /**  dialog点击按钮后自动隐藏，默认为true 
+         <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int autoDismiss=0x7f010013;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+        public static final int autoDismiss=0x7f010018;
+        /**  dialog背景
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int background=0x7f010012;
+        public static final int background=0x7f010017;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -48,7 +52,57 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int buttonMargin=0x7f010024;
+        public static final int buttonHeight=0x7f01002d;
+        /**  每个按钮的margin 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int buttonMargin=0x7f01002a;
+        /**  每个按钮的padding 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int buttonPadding=0x7f010029;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int buttonTextAppearance=0x7f01002b;
+        /**  按钮栏的宽度和高度 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int buttonWidth=0x7f01002c;
+        /**  content显示内容 
+         <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int content=0x7f01000c;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int contentBackground=0x7f01000d;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -58,27 +112,12 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int buttonPadding=0x7f010023;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+        public static final int contentHeight=0x7f01000f;
+        /**  content里的text外观，可被textSize和textColor覆盖 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int buttonTextAppearance=0x7f010025;
-        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int content=0x7f010008;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static final int contentBackground=0x7f010009;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static final int contentTextAppearance=0x7f01000a;
+        public static final int contentTextAppearance=0x7f01000b;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -87,7 +126,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int contentTextColor=0x7f010007;
+        public static final int contentTextColor=0x7f01000a;
         /**  Style of the alert dialog. 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
@@ -98,7 +137,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int contentTextSize=0x7f010006;
+        public static final int contentTextSize=0x7f010009;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -108,7 +147,17 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int height=0x7f01000e;
+        public static final int contentWidth=0x7f01000e;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int height=0x7f010013;
         /** <p>Must be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
 The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
 some parent container.
@@ -118,32 +167,45 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int heightFraction=0x7f010010;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int itemBackgroudFoot=0x7f010005;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int itemBackgroudHead=0x7f010004;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+        public static final int heightFraction=0x7f010015;
+        /**  listItem里的text背景 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int itemBackground=0x7f010000;
+        public static final int itemBackground=0x7f010004;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int itemBackgroundFoot=0x7f010006;
+        /**  listItem第一个和最后一个背景，可覆盖itemBackground 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int itemBackgroundHead=0x7f010005;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int itemHeight=0x7f010008;
+        /**  listItem四周的margin 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -153,7 +215,8 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int itemMargin=0x7f010002;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+        /**  listItem上下的margin 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
 <p>This may also be a reference to a resource (in the form
@@ -163,6 +226,22 @@ theme attribute (in the form
 containing a value of this type.
          */
         public static final int itemMarginTopAndBottom=0x7f010003;
+        /**  listItem里的text外观，可被textSize和textColor覆盖 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int itemTextAppearance=0x7f010000;
+        /**  listItem宽度和高度 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int itemWidth=0x7f010007;
         /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -170,11 +249,11 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int negativeButton=0x7f01001f;
+        public static final int negativeButton=0x7f010026;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int negativeButtonBg=0x7f010021;
+        public static final int negativeButtonBg=0x7f010028;
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -182,27 +261,20 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int negativeButtonText=0x7f010020;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static final int onNegativeClick=0x7f010022;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static final int onPositiveClick=0x7f01001e;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+        public static final int negativeButtonText=0x7f010027;
+        /**  确定取消按钮的属性 
+         <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int positiveButton=0x7f01001b;
+        public static final int positiveButton=0x7f010023;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int positiveButtonBg=0x7f01001d;
+        public static final int positiveButtonBg=0x7f010025;
         /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
@@ -210,16 +282,18 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int positiveButtonText=0x7f01001c;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+        public static final int positiveButtonText=0x7f010024;
+        /**  是否显示dialog底部按钮栏 默认true
+         <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
 <p>This may also be a reference to a resource (in the form
 "<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int showButtons=0x7f010014;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+        public static final int showButtons=0x7f010019;
+        /**  list数据源，非必须 
+         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int stringArray=0x7f010001;
@@ -230,15 +304,35 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int title=0x7f010018;
+        public static final int title=0x7f01001d;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int titleBackground=0x7f010019;
+        public static final int titleBackground=0x7f01001e;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int titleHeight=0x7f010021;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int titlePadding=0x7f010022;
         /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
-        public static final int titleTextAppearance=0x7f01001a;
+        public static final int titleTextAppearance=0x7f01001f;
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
 "<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
 <p>This may also be a reference to a resource (in the form
@@ -247,49 +341,8 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int titleTextColor=0x7f010017;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int titleTextSize=0x7f010016;
-        /** <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>list</code></td><td>1</td><td></td></tr>
-<tr><td><code>alert</code></td><td>2</td><td></td></tr>
-</table>
-         */
-        public static final int type=0x7f010015;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int width=0x7f01000d;
-        /** <p>Must be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
-The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
-some parent container.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int widthFraction=0x7f01000f;
-        /**  Style of the base dialog. 
+        public static final int titleTextColor=0x7f01001c;
+        /**  title属性 
          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -299,7 +352,7 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int x=0x7f01000b;
+        public static final int titleTextSize=0x7f01001b;
         /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
 Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
 in (inches), mm (millimeters).
@@ -309,9 +362,66 @@ theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
          */
-        public static final int y=0x7f01000c;
+        public static final int titleWidth=0x7f010020;
+        /**  dialog类型，非自定义view的时候需指定 
+         <p>Must be one of the following constant values.</p>
+<table>
+<colgroup align="left" />
+<colgroup align="left" />
+<colgroup align="left" />
+<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
+<tr><td><code>list</code></td><td>1</td><td></td></tr>
+<tr><td><code>alert</code></td><td>2</td><td></td></tr>
+</table>
+         */
+        public static final int type=0x7f01001a;
+        /**  dialog宽度和高度 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int width=0x7f010012;
+        /**  dialog宽度和高度百分比，优先级大于width和height 
+         <p>Must be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
+The % suffix always means a percentage of the base size; the optional %p suffix provides a size relative to
+some parent container.
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int widthFraction=0x7f010014;
+        /**  Style of the base dialog. 
+ dialog显示位置的偏移量,默认为0 
+         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int x=0x7f010010;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int y=0x7f010011;
     }
     public static final class color {
+        public static final int dialog_color=0x7f070002;
         public static final int light_gray=0x7f070000;
         public static final int transparentgray=0x7f070001;
     }
@@ -341,16 +451,34 @@ containing a value of this type.
         public static final int btn_list_item_foot=0x7f020008;
         public static final int btn_list_item_head=0x7f020009;
         public static final int btn_list_item_middle=0x7f02000a;
-        public static final int ic_launcher=0x7f02000b;
-        public static final int input_bottom_default=0x7f02000c;
-        public static final int input_bottom_pressed=0x7f02000d;
-        public static final int input_middle_default=0x7f02000e;
-        public static final int input_middle_pressed=0x7f02000f;
-        public static final int input_single_default=0x7f020010;
-        public static final int input_single_pressed=0x7f020011;
-        public static final int input_top_default=0x7f020012;
-        public static final int input_top_pressed=0x7f020013;
-        public static final int login_input=0x7f020014;
+        public static final int com_bt_402_2_normal=0x7f02000b;
+        public static final int com_bt_402_2_pressed=0x7f02000c;
+        public static final int com_bt_a2_normal=0x7f02000d;
+        public static final int com_bt_a2_pressed=0x7f02000e;
+        public static final int com_messagebox_bg_up_btn=0x7f02000f;
+        public static final int com_messagebox_bg_up_normal=0x7f020010;
+        public static final int com_messagebox_bg_up_pressed=0x7f020011;
+        public static final int com_messagebox_inputbox=0x7f020012;
+        public static final int com_messagebox_line=0x7f020013;
+        public static final int com_messagebox_little_bg_down=0x7f020014;
+        public static final int com_messagebox_little_bg_down_normal=0x7f020015;
+        public static final int com_messagebox_little_bg_down_pressed=0x7f020016;
+        public static final int com_messagebox_little_bg_middle=0x7f020017;
+        public static final int com_messagebox_little_bg_middle_normal=0x7f020018;
+        public static final int com_messagebox_little_bg_middle_pressed=0x7f020019;
+        public static final int com_messagebox_little_bg_up=0x7f02001a;
+        public static final int com_messagebox_little_line=0x7f02001b;
+        public static final int ic_launcher=0x7f02001c;
+        public static final int input_bottom_default=0x7f02001d;
+        public static final int input_bottom_pressed=0x7f02001e;
+        public static final int input_middle_default=0x7f02001f;
+        public static final int input_middle_pressed=0x7f020020;
+        public static final int input_single_default=0x7f020021;
+        public static final int input_single_pressed=0x7f020022;
+        public static final int input_top_default=0x7f020023;
+        public static final int input_top_pressed=0x7f020024;
+        public static final int login_input=0x7f020025;
+        public static final int public_bt_bg=0x7f020026;
     }
     public static final class id {
         public static final int action_settings=0x7f06000f;
@@ -383,6 +511,7 @@ containing a value of this type.
     public static final class string {
         public static final int action_settings=0x7f090001;
         public static final int app_name=0x7f090000;
+        public static final int dialogTitle=0x7f090003;
         public static final int hello_world=0x7f090002;
     }
     public static final class style {
@@ -418,41 +547,51 @@ containing a value of this type.
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f08000a;
+        public static final int AppBaseTheme=0x7f08000c;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f08000b;
-        /**   alert style 
+        public static final int AppTheme=0x7f08000d;
+        /**  alert style parent 自定义Dialog可继承此Dialog
          */
-        public static final int CommonAlertDialog=0x7f080004;
-        /**   empty style 
+        public static final int BaseAlertDialog=0x7f080001;
+        /**   empty style , 自定义Dialog 可继承此Style，view为空
 背景透明
          */
-        public static final int CommonEmptyDialog=0x7f080005;
-        /**   list style 
+        public static final int BaseEmptyDialog=0x7f080002;
+        /**   list style parent, 自定义Dialog可继承此style
          */
-        public static final int CommonListDialog=0x7f080000;
-        /**   list style with some space between items. 
+        public static final int BaseListDialog=0x7f080000;
+        /**  默认  alert style 
          */
-        public static final int CommonSpaceListDialog=0x7f080001;
+        public static final int CommonAlertDialog=0x7f080005;
+        /**  默认  list style 
+         */
+        public static final int CommonListDialog=0x7f080003;
+        /**  默认  list style with some space between items. 
+         */
+        public static final int CommonSpaceListDialog=0x7f080004;
         /**  自定义 alertStyle 
          */
-        public static final int MyAlertDialog=0x7f08000e;
+        public static final int MyAlertDialog=0x7f080012;
         /**  自定义 listStyle 
          */
-        public static final int MyListDialog=0x7f08000c;
+        public static final int MyListDialog=0x7f08000e;
         /**  自定义对话框中item 
          */
-        public static final int TextApperance=0x7f08000d;
-        public static final int Widget=0x7f080002;
-        public static final int common_dialog_window_anim_bottom=0x7f080007;
-        public static final int common_dialog_window_anim_left=0x7f080008;
-        public static final int common_dialog_window_anim_right=0x7f080009;
+        public static final int TextApperance=0x7f080010;
+        public static final int Widget=0x7f080006;
+        public static final int black18=0x7f080011;
+        public static final int common_dialog_window_anim_bottom=0x7f080009;
+        public static final int common_dialog_window_anim_left=0x7f08000a;
+        public static final int common_dialog_window_anim_right=0x7f08000b;
         /**  对话框动画 
          */
-        public static final int common_dialog_window_anim_top=0x7f080006;
-        public static final int itemText=0x7f080003;
+        public static final int common_dialog_window_anim_top=0x7f080008;
+        public static final int itemText=0x7f080007;
+        /**  testStyle 
+         */
+        public static final int testMyListDialog=0x7f08000f;
     }
     public static final class styleable {
         /** Attributes that can be used with a AlertDialog.
@@ -461,25 +600,30 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #AlertDialog_content me.risky.commondialog.example:content}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_content me.risky.commondialog.example:content}</code></td><td> content显示内容 </td></tr>
            <tr><td><code>{@link #AlertDialog_contentBackground me.risky.commondialog.example:contentBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #AlertDialog_contentTextAppearance me.risky.commondialog.example:contentTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_contentHeight me.risky.commondialog.example:contentHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #AlertDialog_contentTextAppearance me.risky.commondialog.example:contentTextAppearance}</code></td><td> content里的text外观，可被textSize和textColor覆盖 </td></tr>
            <tr><td><code>{@link #AlertDialog_contentTextColor me.risky.commondialog.example:contentTextColor}</code></td><td></td></tr>
            <tr><td><code>{@link #AlertDialog_contentTextSize me.risky.commondialog.example:contentTextSize}</code></td><td> Style of the alert dialog.</td></tr>
+           <tr><td><code>{@link #AlertDialog_contentWidth me.risky.commondialog.example:contentWidth}</code></td><td></td></tr>
            </table>
            @see #AlertDialog_content
            @see #AlertDialog_contentBackground
+           @see #AlertDialog_contentHeight
            @see #AlertDialog_contentTextAppearance
            @see #AlertDialog_contentTextColor
            @see #AlertDialog_contentTextSize
+           @see #AlertDialog_contentWidth
          */
         public static final int[] AlertDialog = {
-            0x7f010006, 0x7f010007, 0x7f010008, 0x7f010009,
-            0x7f01000a
+            0x7f010009, 0x7f01000a, 0x7f01000b, 0x7f01000c,
+            0x7f01000d, 0x7f01000e, 0x7f01000f
         };
         /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#content}
-          attribute's value can be found in the {@link #AlertDialog} array.
+          <p>
+          @attr description
+           content显示内容 
 
 
           <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
@@ -488,9 +632,10 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
+          <p>This is a private symbol.
           @attr name me.risky.commondialog.example:content
         */
-        public static final int AlertDialog_content = 2;
+        public static final int AlertDialog_content = 3;
         /**
           <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#contentBackground}
           attribute's value can be found in the {@link #AlertDialog} array.
@@ -500,17 +645,35 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name me.risky.commondialog.example:contentBackground
         */
-        public static final int AlertDialog_contentBackground = 3;
+        public static final int AlertDialog_contentBackground = 4;
         /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#contentTextAppearance}
+          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#contentHeight}
           attribute's value can be found in the {@link #AlertDialog} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name me.risky.commondialog.example:contentHeight
+        */
+        public static final int AlertDialog_contentHeight = 6;
+        /**
+          <p>
+          @attr description
+           content里的text外观，可被textSize和textColor覆盖 
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
           @attr name me.risky.commondialog.example:contentTextAppearance
         */
-        public static final int AlertDialog_contentTextAppearance = 4;
+        public static final int AlertDialog_contentTextAppearance = 2;
         /**
           <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#contentTextColor}
           attribute's value can be found in the {@link #AlertDialog} array.
@@ -544,38 +707,57 @@ containing a value of this type.
           @attr name me.risky.commondialog.example:contentTextSize
         */
         public static final int AlertDialog_contentTextSize = 0;
+        /**
+          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#contentWidth}
+          attribute's value can be found in the {@link #AlertDialog} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name me.risky.commondialog.example:contentWidth
+        */
+        public static final int AlertDialog_contentWidth = 5;
         /**  对话框共有的属性 
            <p>Includes the following attributes:</p>
            <table>
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #CommonDialog_android_gravity android:gravity}</code></td><td></td></tr>
-           <tr><td><code>{@link #CommonDialog_anim me.risky.commondialog.example:anim}</code></td><td></td></tr>
-           <tr><td><code>{@link #CommonDialog_autoDismiss me.risky.commondialog.example:autoDismiss}</code></td><td></td></tr>
-           <tr><td><code>{@link #CommonDialog_background me.risky.commondialog.example:background}</code></td><td></td></tr>
-           <tr><td><code>{@link #CommonDialog_buttonMargin me.risky.commondialog.example:buttonMargin}</code></td><td></td></tr>
-           <tr><td><code>{@link #CommonDialog_buttonPadding me.risky.commondialog.example:buttonPadding}</code></td><td></td></tr>
+           <tr><td><code>{@link #CommonDialog_android_gravity android:gravity}</code></td><td> dialog位置属性 </td></tr>
+           <tr><td><code>{@link #CommonDialog_anim me.risky.commondialog.example:anim}</code></td><td> dialog进出动画 </td></tr>
+           <tr><td><code>{@link #CommonDialog_autoDismiss me.risky.commondialog.example:autoDismiss}</code></td><td> dialog点击按钮后自动隐藏，默认为true </td></tr>
+           <tr><td><code>{@link #CommonDialog_background me.risky.commondialog.example:background}</code></td><td> dialog背景</td></tr>
+           <tr><td><code>{@link #CommonDialog_buttonHeight me.risky.commondialog.example:buttonHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #CommonDialog_buttonMargin me.risky.commondialog.example:buttonMargin}</code></td><td> 每个按钮的margin </td></tr>
+           <tr><td><code>{@link #CommonDialog_buttonPadding me.risky.commondialog.example:buttonPadding}</code></td><td> 每个按钮的padding </td></tr>
            <tr><td><code>{@link #CommonDialog_buttonTextAppearance me.risky.commondialog.example:buttonTextAppearance}</code></td><td></td></tr>
+           <tr><td><code>{@link #CommonDialog_buttonWidth me.risky.commondialog.example:buttonWidth}</code></td><td> 按钮栏的宽度和高度 </td></tr>
            <tr><td><code>{@link #CommonDialog_height me.risky.commondialog.example:height}</code></td><td></td></tr>
            <tr><td><code>{@link #CommonDialog_heightFraction me.risky.commondialog.example:heightFraction}</code></td><td></td></tr>
            <tr><td><code>{@link #CommonDialog_negativeButton me.risky.commondialog.example:negativeButton}</code></td><td></td></tr>
            <tr><td><code>{@link #CommonDialog_negativeButtonBg me.risky.commondialog.example:negativeButtonBg}</code></td><td></td></tr>
            <tr><td><code>{@link #CommonDialog_negativeButtonText me.risky.commondialog.example:negativeButtonText}</code></td><td></td></tr>
-           <tr><td><code>{@link #CommonDialog_onNegativeClick me.risky.commondialog.example:onNegativeClick}</code></td><td></td></tr>
-           <tr><td><code>{@link #CommonDialog_onPositiveClick me.risky.commondialog.example:onPositiveClick}</code></td><td></td></tr>
-           <tr><td><code>{@link #CommonDialog_positiveButton me.risky.commondialog.example:positiveButton}</code></td><td></td></tr>
+           <tr><td><code>{@link #CommonDialog_positiveButton me.risky.commondialog.example:positiveButton}</code></td><td> 确定取消按钮的属性 </td></tr>
            <tr><td><code>{@link #CommonDialog_positiveButtonBg me.risky.commondialog.example:positiveButtonBg}</code></td><td></td></tr>
            <tr><td><code>{@link #CommonDialog_positiveButtonText me.risky.commondialog.example:positiveButtonText}</code></td><td></td></tr>
-           <tr><td><code>{@link #CommonDialog_showButtons me.risky.commondialog.example:showButtons}</code></td><td></td></tr>
+           <tr><td><code>{@link #CommonDialog_showButtons me.risky.commondialog.example:showButtons}</code></td><td> 是否显示dialog底部按钮栏 默认true</td></tr>
            <tr><td><code>{@link #CommonDialog_title me.risky.commondialog.example:title}</code></td><td></td></tr>
            <tr><td><code>{@link #CommonDialog_titleBackground me.risky.commondialog.example:titleBackground}</code></td><td></td></tr>
+           <tr><td><code>{@link #CommonDialog_titleHeight me.risky.commondialog.example:titleHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #CommonDialog_titlePadding me.risky.commondialog.example:titlePadding}</code></td><td></td></tr>
            <tr><td><code>{@link #CommonDialog_titleTextAppearance me.risky.commondialog.example:titleTextAppearance}</code></td><td></td></tr>
            <tr><td><code>{@link #CommonDialog_titleTextColor me.risky.commondialog.example:titleTextColor}</code></td><td></td></tr>
-           <tr><td><code>{@link #CommonDialog_titleTextSize me.risky.commondialog.example:titleTextSize}</code></td><td></td></tr>
-           <tr><td><code>{@link #CommonDialog_type me.risky.commondialog.example:type}</code></td><td></td></tr>
-           <tr><td><code>{@link #CommonDialog_width me.risky.commondialog.example:width}</code></td><td></td></tr>
-           <tr><td><code>{@link #CommonDialog_widthFraction me.risky.commondialog.example:widthFraction}</code></td><td></td></tr>
+           <tr><td><code>{@link #CommonDialog_titleTextSize me.risky.commondialog.example:titleTextSize}</code></td><td> title属性 </td></tr>
+           <tr><td><code>{@link #CommonDialog_titleWidth me.risky.commondialog.example:titleWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #CommonDialog_type me.risky.commondialog.example:type}</code></td><td> dialog类型，非自定义view的时候需指定 </td></tr>
+           <tr><td><code>{@link #CommonDialog_width me.risky.commondialog.example:width}</code></td><td> dialog宽度和高度 </td></tr>
+           <tr><td><code>{@link #CommonDialog_widthFraction me.risky.commondialog.example:widthFraction}</code></td><td> dialog宽度和高度百分比，优先级大于width和height </td></tr>
            <tr><td><code>{@link #CommonDialog_x me.risky.commondialog.example:x}</code></td><td> Style of the base dialog.</td></tr>
            <tr><td><code>{@link #CommonDialog_y me.risky.commondialog.example:y}</code></td><td></td></tr>
            </table>
@@ -583,25 +765,28 @@ containing a value of this type.
            @see #CommonDialog_anim
            @see #CommonDialog_autoDismiss
            @see #CommonDialog_background
+           @see #CommonDialog_buttonHeight
            @see #CommonDialog_buttonMargin
            @see #CommonDialog_buttonPadding
            @see #CommonDialog_buttonTextAppearance
+           @see #CommonDialog_buttonWidth
            @see #CommonDialog_height
            @see #CommonDialog_heightFraction
            @see #CommonDialog_negativeButton
            @see #CommonDialog_negativeButtonBg
            @see #CommonDialog_negativeButtonText
-           @see #CommonDialog_onNegativeClick
-           @see #CommonDialog_onPositiveClick
            @see #CommonDialog_positiveButton
            @see #CommonDialog_positiveButtonBg
            @see #CommonDialog_positiveButtonText
            @see #CommonDialog_showButtons
            @see #CommonDialog_title
            @see #CommonDialog_titleBackground
+           @see #CommonDialog_titleHeight
+           @see #CommonDialog_titlePadding
            @see #CommonDialog_titleTextAppearance
            @see #CommonDialog_titleTextColor
            @see #CommonDialog_titleTextSize
+           @see #CommonDialog_titleWidth
            @see #CommonDialog_type
            @see #CommonDialog_width
            @see #CommonDialog_widthFraction
@@ -609,33 +794,40 @@ containing a value of this type.
            @see #CommonDialog_y
          */
         public static final int[] CommonDialog = {
-            0x010100af, 0x7f01000b, 0x7f01000c, 0x7f01000d,
-            0x7f01000e, 0x7f01000f, 0x7f010010, 0x7f010011,
-            0x7f010012, 0x7f010013, 0x7f010014, 0x7f010015,
-            0x7f010016, 0x7f010017, 0x7f010018, 0x7f010019,
-            0x7f01001a, 0x7f01001b, 0x7f01001c, 0x7f01001d,
-            0x7f01001e, 0x7f01001f, 0x7f010020, 0x7f010021,
-            0x7f010022, 0x7f010023, 0x7f010024, 0x7f010025
+            0x010100af, 0x7f010010, 0x7f010011, 0x7f010012,
+            0x7f010013, 0x7f010014, 0x7f010015, 0x7f010016,
+            0x7f010017, 0x7f010018, 0x7f010019, 0x7f01001a,
+            0x7f01001b, 0x7f01001c, 0x7f01001d, 0x7f01001e,
+            0x7f01001f, 0x7f010020, 0x7f010021, 0x7f010022,
+            0x7f010023, 0x7f010024, 0x7f010025, 0x7f010026,
+            0x7f010027, 0x7f010028, 0x7f010029, 0x7f01002a,
+            0x7f01002b, 0x7f01002c, 0x7f01002d
         };
         /**
-          <p>This symbol is the offset where the {@link android.R.attr#gravity}
-          attribute's value can be found in the {@link #CommonDialog} array.
+          <p>
+          @attr description
+           dialog位置属性 
+          <p>This corresponds to the global attribute
+          resource symbol {@link android.R.attr#gravity}.
           @attr name android:gravity
         */
         public static final int CommonDialog_android_gravity = 0;
         /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#anim}
-          attribute's value can be found in the {@link #CommonDialog} array.
+          <p>
+          @attr description
+           dialog进出动画 
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
           @attr name me.risky.commondialog.example:anim
         */
         public static final int CommonDialog_anim = 7;
         /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#autoDismiss}
-          attribute's value can be found in the {@link #CommonDialog} array.
+          <p>
+          @attr description
+           dialog点击按钮后自动隐藏，默认为true 
 
 
           <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
@@ -644,21 +836,24 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
+          <p>This is a private symbol.
           @attr name me.risky.commondialog.example:autoDismiss
         */
         public static final int CommonDialog_autoDismiss = 9;
         /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#background}
-          attribute's value can be found in the {@link #CommonDialog} array.
+          <p>
+          @attr description
+           dialog背景
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
           @attr name me.risky.commondialog.example:background
         */
         public static final int CommonDialog_background = 8;
         /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#buttonMargin}
+          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#buttonHeight}
           attribute's value can be found in the {@link #CommonDialog} array.
 
 
@@ -670,12 +865,31 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
+          @attr name me.risky.commondialog.example:buttonHeight
+        */
+        public static final int CommonDialog_buttonHeight = 30;
+        /**
+          <p>
+          @attr description
+           每个按钮的margin 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
           @attr name me.risky.commondialog.example:buttonMargin
         */
-        public static final int CommonDialog_buttonMargin = 26;
+        public static final int CommonDialog_buttonMargin = 27;
         /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#buttonPadding}
-          attribute's value can be found in the {@link #CommonDialog} array.
+          <p>
+          @attr description
+           每个按钮的padding 
 
 
           <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
@@ -686,9 +900,10 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
+          <p>This is a private symbol.
           @attr name me.risky.commondialog.example:buttonPadding
         */
-        public static final int CommonDialog_buttonPadding = 25;
+        public static final int CommonDialog_buttonPadding = 26;
         /**
           <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#buttonTextAppearance}
           attribute's value can be found in the {@link #CommonDialog} array.
@@ -698,7 +913,25 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name me.risky.commondialog.example:buttonTextAppearance
         */
-        public static final int CommonDialog_buttonTextAppearance = 27;
+        public static final int CommonDialog_buttonTextAppearance = 28;
+        /**
+          <p>
+          @attr description
+           按钮栏的宽度和高度 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name me.risky.commondialog.example:buttonWidth
+        */
+        public static final int CommonDialog_buttonWidth = 29;
         /**
           <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#height}
           attribute's value can be found in the {@link #CommonDialog} array.
@@ -744,7 +977,7 @@ theme attribute (in the form
 containing a value of this type.
           @attr name me.risky.commondialog.example:negativeButton
         */
-        public static final int CommonDialog_negativeButton = 21;
+        public static final int CommonDialog_negativeButton = 23;
         /**
           <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#negativeButtonBg}
           attribute's value can be found in the {@link #CommonDialog} array.
@@ -754,7 +987,7 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name me.risky.commondialog.example:negativeButtonBg
         */
-        public static final int CommonDialog_negativeButtonBg = 23;
+        public static final int CommonDialog_negativeButtonBg = 25;
         /**
           <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#negativeButtonText}
           attribute's value can be found in the {@link #CommonDialog} array.
@@ -768,30 +1001,11 @@ theme attribute (in the form
 containing a value of this type.
           @attr name me.risky.commondialog.example:negativeButtonText
         */
-        public static final int CommonDialog_negativeButtonText = 22;
+        public static final int CommonDialog_negativeButtonText = 24;
         /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#onNegativeClick}
-          attribute's value can be found in the {@link #CommonDialog} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name me.risky.commondialog.example:onNegativeClick
-        */
-        public static final int CommonDialog_onNegativeClick = 24;
-        /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#onPositiveClick}
-          attribute's value can be found in the {@link #CommonDialog} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name me.risky.commondialog.example:onPositiveClick
-        */
-        public static final int CommonDialog_onPositiveClick = 20;
-        /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#positiveButton}
-          attribute's value can be found in the {@link #CommonDialog} array.
+          <p>
+          @attr description
+           确定取消按钮的属性 
 
 
           <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
@@ -800,9 +1014,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
+          <p>This is a private symbol.
           @attr name me.risky.commondialog.example:positiveButton
         */
-        public static final int CommonDialog_positiveButton = 17;
+        public static final int CommonDialog_positiveButton = 20;
         /**
           <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#positiveButtonBg}
           attribute's value can be found in the {@link #CommonDialog} array.
@@ -812,7 +1027,7 @@ containing a value of this type.
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
           @attr name me.risky.commondialog.example:positiveButtonBg
         */
-        public static final int CommonDialog_positiveButtonBg = 19;
+        public static final int CommonDialog_positiveButtonBg = 22;
         /**
           <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#positiveButtonText}
           attribute's value can be found in the {@link #CommonDialog} array.
@@ -826,10 +1041,11 @@ theme attribute (in the form
 containing a value of this type.
           @attr name me.risky.commondialog.example:positiveButtonText
         */
-        public static final int CommonDialog_positiveButtonText = 18;
+        public static final int CommonDialog_positiveButtonText = 21;
         /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#showButtons}
-          attribute's value can be found in the {@link #CommonDialog} array.
+          <p>
+          @attr description
+           是否显示dialog底部按钮栏 默认true
 
 
           <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
@@ -838,6 +1054,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
+          <p>This is a private symbol.
           @attr name me.risky.commondialog.example:showButtons
         */
         public static final int CommonDialog_showButtons = 10;
@@ -866,6 +1083,38 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         */
         public static final int CommonDialog_titleBackground = 15;
         /**
+          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#titleHeight}
+          attribute's value can be found in the {@link #CommonDialog} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name me.risky.commondialog.example:titleHeight
+        */
+        public static final int CommonDialog_titleHeight = 18;
+        /**
+          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#titlePadding}
+          attribute's value can be found in the {@link #CommonDialog} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name me.risky.commondialog.example:titlePadding
+        */
+        public static final int CommonDialog_titlePadding = 19;
+        /**
           <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#titleTextAppearance}
           attribute's value can be found in the {@link #CommonDialog} array.
 
@@ -891,7 +1140,25 @@ containing a value of this type.
         */
         public static final int CommonDialog_titleTextColor = 13;
         /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#titleTextSize}
+          <p>
+          @attr description
+           title属性 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name me.risky.commondialog.example:titleTextSize
+        */
+        public static final int CommonDialog_titleTextSize = 12;
+        /**
+          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#titleWidth}
           attribute's value can be found in the {@link #CommonDialog} array.
 
 
@@ -903,12 +1170,13 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name me.risky.commondialog.example:titleTextSize
+          @attr name me.risky.commondialog.example:titleWidth
         */
-        public static final int CommonDialog_titleTextSize = 12;
+        public static final int CommonDialog_titleWidth = 17;
         /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#type}
-          attribute's value can be found in the {@link #CommonDialog} array.
+          <p>
+          @attr description
+           dialog类型，非自定义view的时候需指定 
 
 
           <p>Must be one of the following constant values.</p>
@@ -920,12 +1188,14 @@ containing a value of this type.
 <tr><td><code>list</code></td><td>1</td><td></td></tr>
 <tr><td><code>alert</code></td><td>2</td><td></td></tr>
 </table>
+          <p>This is a private symbol.
           @attr name me.risky.commondialog.example:type
         */
         public static final int CommonDialog_type = 11;
         /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#width}
-          attribute's value can be found in the {@link #CommonDialog} array.
+          <p>
+          @attr description
+           dialog宽度和高度 
 
 
           <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
@@ -936,12 +1206,14 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
+          <p>This is a private symbol.
           @attr name me.risky.commondialog.example:width
         */
         public static final int CommonDialog_width = 3;
         /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#widthFraction}
-          attribute's value can be found in the {@link #CommonDialog} array.
+          <p>
+          @attr description
+           dialog宽度和高度百分比，优先级大于width和height 
 
 
           <p>Must be a fractional value, which is a floating point number appended with either % or %p, such as "<code>14.5%</code>".
@@ -952,6 +1224,7 @@ some parent container.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
+          <p>This is a private symbol.
           @attr name me.risky.commondialog.example:widthFraction
         */
         public static final int CommonDialog_widthFraction = 5;
@@ -959,6 +1232,7 @@ containing a value of this type.
           <p>
           @attr description
            Style of the base dialog. 
+ dialog显示位置的偏移量,默认为0 
 
 
           <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
@@ -995,96 +1269,65 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ListDialog_android_textAppearance android:textAppearance}</code></td><td></td></tr>
            <tr><td><code>{@link #ListDialog_android_textColor android:textColor}</code></td><td></td></tr>
            <tr><td><code>{@link #ListDialog_android_textSize android:textSize}</code></td><td> Style of the list dialog.</td></tr>
-           <tr><td><code>{@link #ListDialog_itemBackgroudFoot me.risky.commondialog.example:itemBackgroudFoot}</code></td><td></td></tr>
-           <tr><td><code>{@link #ListDialog_itemBackgroudHead me.risky.commondialog.example:itemBackgroudHead}</code></td><td></td></tr>
-           <tr><td><code>{@link #ListDialog_itemBackground me.risky.commondialog.example:itemBackground}</code></td><td></td></tr>
-           <tr><td><code>{@link #ListDialog_itemMargin me.risky.commondialog.example:itemMargin}</code></td><td></td></tr>
-           <tr><td><code>{@link #ListDialog_itemMarginTopAndBottom me.risky.commondialog.example:itemMarginTopAndBottom}</code></td><td></td></tr>
-           <tr><td><code>{@link #ListDialog_stringArray me.risky.commondialog.example:stringArray}</code></td><td></td></tr>
+           <tr><td><code>{@link #ListDialog_itemBackground me.risky.commondialog.example:itemBackground}</code></td><td> listItem里的text背景 </td></tr>
+           <tr><td><code>{@link #ListDialog_itemBackgroundFoot me.risky.commondialog.example:itemBackgroundFoot}</code></td><td></td></tr>
+           <tr><td><code>{@link #ListDialog_itemBackgroundHead me.risky.commondialog.example:itemBackgroundHead}</code></td><td> listItem第一个和最后一个背景，可覆盖itemBackground </td></tr>
+           <tr><td><code>{@link #ListDialog_itemHeight me.risky.commondialog.example:itemHeight}</code></td><td></td></tr>
+           <tr><td><code>{@link #ListDialog_itemMargin me.risky.commondialog.example:itemMargin}</code></td><td> listItem四周的margin </td></tr>
+           <tr><td><code>{@link #ListDialog_itemMarginTopAndBottom me.risky.commondialog.example:itemMarginTopAndBottom}</code></td><td> listItem上下的margin </td></tr>
+           <tr><td><code>{@link #ListDialog_itemTextAppearance me.risky.commondialog.example:itemTextAppearance}</code></td><td> listItem里的text外观，可被textSize和textColor覆盖 </td></tr>
+           <tr><td><code>{@link #ListDialog_itemWidth me.risky.commondialog.example:itemWidth}</code></td><td> listItem宽度和高度 </td></tr>
+           <tr><td><code>{@link #ListDialog_stringArray me.risky.commondialog.example:stringArray}</code></td><td> list数据源，非必须 </td></tr>
            </table>
-           @see #ListDialog_android_textAppearance
            @see #ListDialog_android_textColor
            @see #ListDialog_android_textSize
-           @see #ListDialog_itemBackgroudFoot
-           @see #ListDialog_itemBackgroudHead
            @see #ListDialog_itemBackground
+           @see #ListDialog_itemBackgroundFoot
+           @see #ListDialog_itemBackgroundHead
+           @see #ListDialog_itemHeight
            @see #ListDialog_itemMargin
            @see #ListDialog_itemMarginTopAndBottom
+           @see #ListDialog_itemTextAppearance
+           @see #ListDialog_itemWidth
            @see #ListDialog_stringArray
          */
         public static final int[] ListDialog = {
-            0x01010034, 0x01010095, 0x01010098, 0x7f010000,
-            0x7f010001, 0x7f010002, 0x7f010003, 0x7f010004,
-            0x7f010005
+            0x01010095, 0x01010098, 0x7f010000, 0x7f010001,
+            0x7f010002, 0x7f010003, 0x7f010004, 0x7f010005,
+            0x7f010006, 0x7f010007, 0x7f010008
         };
-        /**
-          <p>This symbol is the offset where the {@link android.R.attr#textAppearance}
-          attribute's value can be found in the {@link #ListDialog} array.
-          @attr name android:textAppearance
-        */
-        public static final int ListDialog_android_textAppearance = 0;
         /**
           <p>This symbol is the offset where the {@link android.R.attr#textColor}
           attribute's value can be found in the {@link #ListDialog} array.
           @attr name android:textColor
         */
-        public static final int ListDialog_android_textColor = 2;
+        public static final int ListDialog_android_textColor = 1;
         /**
           <p>
           @attr description
            Style of the list dialog. 
+ listItem里的text属性 
           <p>This corresponds to the global attribute
           resource symbol {@link android.R.attr#textSize}.
           @attr name android:textSize
         */
-        public static final int ListDialog_android_textSize = 1;
+        public static final int ListDialog_android_textSize = 0;
         /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#itemBackgroudFoot}
-          attribute's value can be found in the {@link #ListDialog} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name me.risky.commondialog.example:itemBackgroudFoot
-        */
-        public static final int ListDialog_itemBackgroudFoot = 8;
-        /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#itemBackgroudHead}
-          attribute's value can be found in the {@link #ListDialog} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name me.risky.commondialog.example:itemBackgroudHead
-        */
-        public static final int ListDialog_itemBackgroudHead = 7;
-        /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#itemBackground}
-          attribute's value can be found in the {@link #ListDialog} array.
+          <p>
+          @attr description
+           listItem里的text背景 
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
           @attr name me.risky.commondialog.example:itemBackground
         */
-        public static final int ListDialog_itemBackground = 3;
+        public static final int ListDialog_itemBackground = 6;
         /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#itemMargin}
+          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#itemBackgroundFoot}
           attribute's value can be found in the {@link #ListDialog} array.
 
 
@@ -1096,12 +1339,65 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
+          @attr name me.risky.commondialog.example:itemBackgroundFoot
+        */
+        public static final int ListDialog_itemBackgroundFoot = 8;
+        /**
+          <p>
+          @attr description
+           listItem第一个和最后一个背景，可覆盖itemBackground 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name me.risky.commondialog.example:itemBackgroundHead
+        */
+        public static final int ListDialog_itemBackgroundHead = 7;
+        /**
+          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#itemHeight}
+          attribute's value can be found in the {@link #ListDialog} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name me.risky.commondialog.example:itemHeight
+        */
+        public static final int ListDialog_itemHeight = 10;
+        /**
+          <p>
+          @attr description
+           listItem四周的margin 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
           @attr name me.risky.commondialog.example:itemMargin
         */
-        public static final int ListDialog_itemMargin = 5;
+        public static final int ListDialog_itemMargin = 4;
         /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#itemMarginTopAndBottom}
-          attribute's value can be found in the {@link #ListDialog} array.
+          <p>
+          @attr description
+           listItem上下的margin 
 
 
           <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
@@ -1112,18 +1408,51 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
+          <p>This is a private symbol.
           @attr name me.risky.commondialog.example:itemMarginTopAndBottom
         */
-        public static final int ListDialog_itemMarginTopAndBottom = 6;
+        public static final int ListDialog_itemMarginTopAndBottom = 5;
         /**
-          <p>This symbol is the offset where the {@link me.risky.commondialog.example.R.attr#stringArray}
-          attribute's value can be found in the {@link #ListDialog} array.
+          <p>
+          @attr description
+           listItem里的text外观，可被textSize和textColor覆盖 
 
 
           <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
+          @attr name me.risky.commondialog.example:itemTextAppearance
+        */
+        public static final int ListDialog_itemTextAppearance = 2;
+        /**
+          <p>
+          @attr description
+           listItem宽度和高度 
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          <p>This is a private symbol.
+          @attr name me.risky.commondialog.example:itemWidth
+        */
+        public static final int ListDialog_itemWidth = 9;
+        /**
+          <p>
+          @attr description
+           list数据源，非必须 
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          <p>This is a private symbol.
           @attr name me.risky.commondialog.example:stringArray
         */
-        public static final int ListDialog_stringArray = 4;
+        public static final int ListDialog_stringArray = 3;
     };
 }

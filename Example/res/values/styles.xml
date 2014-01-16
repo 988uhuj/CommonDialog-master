@@ -20,9 +20,8 @@
     
     
     <!-- 自定义 listStyle -->
-    <style name="MyListDialog" parent="CommonListDialog">
+    <style name="MyListDialog" parent="BaseListDialog">
         <item name="anim">@style/common_dialog_window_anim_top</item>
-        <item name="type">list</item>
         <item name="android:gravity">top</item>
         <item name="background">@drawable/login_input</item>
         <item name="widthFraction">100%</item>
@@ -30,6 +29,28 @@
         <!-- 配置数据源，直接显示数据 -->
         <item name="stringArray">@array/city</item>	
         <item name="itemBackground">@drawable/btn_list_item</item>
+    </style>
+    
+    <!-- testStyle -->
+    <style name="testMyListDialog" parent="BaseListDialog">
+        <item name="widthFraction">70%</item>
+        <item name="title">@string/dialogTitle</item>
+        <item name="titleTextAppearance">@style/black18</item>
+        <item name="titleBackground">@drawable/com_messagebox_little_bg_up</item>
+        <item name="titlePadding">8dp</item>
+        
+        <!-- 配置数据源，直接显示数据 -->
+        <item name="stringArray">@array/test</item>	
+        <item name="itemBackgroundHead">@drawable/com_messagebox_little_bg_middle</item>
+        <item name="itemBackground">@drawable/com_messagebox_little_bg_middle</item>
+        <item name="itemBackgroundFoot">@drawable/com_messagebox_little_bg_middle</item>
+       	<item name="itemTextAppearance">@style/black18</item>
+        
+        <item name="showButtons">true</item>
+        <item name="positiveButton">false</item>
+        <item name="negativeButtonText">取消</item>
+        <item name="negativeButtonBg">@drawable/com_messagebox_little_bg_down</item>
+        <item name="buttonTextAppearance">@style/black18</item>
     </style>
     
     
@@ -40,10 +61,14 @@
         <item name="android:textSize">11sp</item>
     </style>
     
+   	<style name="black18">
+        <item name="android:textColor">#000000</item>
+        <item name="android:textSize">18sp</item>
+    </style>
    	
    	
    	<!-- 自定义 alertStyle -->
-   	<style name="MyAlertDialog" parent="CommonAlertDialog">
+   	<style name="MyAlertDialog" parent="BaseAlertDialog">
         <!-- 自定义窗口属性 -->
         <item name="android:gravity">center</item>
         <item name="anim">@style/common_dialog_window_anim_top</item>
@@ -51,8 +76,6 @@
         <!-- 点击按钮后自动隐藏。默认为true -->
         <item name="autoDismiss">false</item>
         <item name="type">alert</item>
-        <!-- 按钮栏显示开关，默认true -->
-        <!-- <item name="showButtons">false</item> -->
         
         <!-- 可覆盖Appearance中的属性 -->
         <!-- 自定义list item属性 -->
@@ -72,10 +95,6 @@
         <item name="negativeButton">true</item>
         <item name="negativeButtonText">"cancel"</item>
         <item name="negativeButtonBg">@drawable/btn_list_item</item>
-        <item name="buttonPadding">0dp</item>
-        <item name="buttonMargin">2dp</item>
-        
-      	<item name="android:textAppearance">@style/itemText</item>
     </style>
     
     

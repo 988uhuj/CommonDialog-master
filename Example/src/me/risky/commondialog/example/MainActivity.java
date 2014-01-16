@@ -36,6 +36,7 @@ public class MainActivity extends Activity {
 		list.add("showCustomThemeListDialog");
 		list.add("showCustomThemeAlertDialog");
 		list.add("showEmptyDialog");
+		list.add("test");
 		
 		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list);
 		
@@ -68,6 +69,8 @@ public class MainActivity extends Activity {
 				case 6:
 					showEmptyDialog();
 					break;
+				case 7:
+					test();
 				default:
 					break;
 				}
@@ -159,6 +162,11 @@ public class MainActivity extends Activity {
     }
     private void showEmptyDialog(){
     	DisplayDialog dialog = DisplayDialog.create(this, DConstants.DEFAULT_EMTPY);
+    	dialog.show();
+    }
+    
+    private void test(){
+    	DisplayDialog dialog = DisplayDialog.create(this, R.style.testMyListDialog);
     	dialog.show();
     }
 }

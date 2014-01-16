@@ -13,4 +13,11 @@
         <item>漳州市</item>
         <item>龙岩市</item>
     </string-array> 
+    
+    <string-array name="test">
+        <item>拍照</item>
+        <item>从相册选择</item>
+    </string-array> 
+    
+    <string name="dialogTitle">上传照片</string>
 </resources>
